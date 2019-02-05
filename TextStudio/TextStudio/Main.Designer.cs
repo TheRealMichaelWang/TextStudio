@@ -36,12 +36,14 @@
             this.ZoomGroupBox = new System.Windows.Forms.GroupBox();
             this.ZoomFactor = new System.Windows.Forms.TrackBar();
             this.OtherToolsTab = new System.Windows.Forms.GroupBox();
+            this.AddToDictionary = new System.Windows.Forms.Button();
             this.FindButton = new System.Windows.Forms.Button();
             this.SpellCheckButton = new System.Windows.Forms.Button();
             this.ImageTab = new System.Windows.Forms.GroupBox();
             this.InsertImageFromUri = new System.Windows.Forms.Button();
             this.InsertImageFromFileButton = new System.Windows.Forms.Button();
             this.FileGroupBox = new System.Windows.Forms.GroupBox();
+            this.ToHTMLDocButton = new System.Windows.Forms.Button();
             this.FetchFromURIButton = new System.Windows.Forms.Button();
             this.PrintButton = new System.Windows.Forms.Button();
             this.OpenButton = new System.Windows.Forms.Button();
@@ -82,8 +84,7 @@
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.AddToDictionary = new System.Windows.Forms.Button();
-            this.ToHTMLDocButton = new System.Windows.Forms.Button();
+            this.Update = new System.Windows.Forms.Button();
             this.HomeTab.SuspendLayout();
             this.SpeechGroupBox.SuspendLayout();
             this.ZoomGroupBox.SuspendLayout();
@@ -177,6 +178,7 @@
             // 
             // OtherToolsTab
             // 
+            this.OtherToolsTab.Controls.Add(this.Update);
             this.OtherToolsTab.Controls.Add(this.AddToDictionary);
             this.OtherToolsTab.Controls.Add(this.FindButton);
             this.OtherToolsTab.Controls.Add(this.SpellCheckButton);
@@ -186,6 +188,16 @@
             this.OtherToolsTab.TabIndex = 9;
             this.OtherToolsTab.TabStop = false;
             this.OtherToolsTab.Text = "OtherTools";
+            // 
+            // AddToDictionary
+            // 
+            this.AddToDictionary.Location = new System.Drawing.Point(6, 42);
+            this.AddToDictionary.Name = "AddToDictionary";
+            this.AddToDictionary.Size = new System.Drawing.Size(75, 23);
+            this.AddToDictionary.TabIndex = 2;
+            this.AddToDictionary.Text = "AddWord";
+            this.AddToDictionary.UseVisualStyleBackColor = true;
+            this.AddToDictionary.Click += new System.EventHandler(this.AddToDictionary_Click);
             // 
             // FindButton
             // 
@@ -251,6 +263,16 @@
             this.FileGroupBox.TabIndex = 7;
             this.FileGroupBox.TabStop = false;
             this.FileGroupBox.Text = "File";
+            // 
+            // ToHTMLDocButton
+            // 
+            this.ToHTMLDocButton.Location = new System.Drawing.Point(105, 46);
+            this.ToHTMLDocButton.Name = "ToHTMLDocButton";
+            this.ToHTMLDocButton.Size = new System.Drawing.Size(139, 23);
+            this.ToHTMLDocButton.TabIndex = 4;
+            this.ToHTMLDocButton.Text = "ToHTMLDocument";
+            this.ToHTMLDocButton.UseVisualStyleBackColor = true;
+            this.ToHTMLDocButton.Click += new System.EventHandler(this.ToHTMLDocButton_Click);
             // 
             // FetchFromURIButton
             // 
@@ -627,25 +649,15 @@
             // 
             this.printDialog.UseEXDialog = true;
             // 
-            // AddToDictionary
+            // Update
             // 
-            this.AddToDictionary.Location = new System.Drawing.Point(6, 42);
-            this.AddToDictionary.Name = "AddToDictionary";
-            this.AddToDictionary.Size = new System.Drawing.Size(75, 23);
-            this.AddToDictionary.TabIndex = 2;
-            this.AddToDictionary.Text = "AddWord";
-            this.AddToDictionary.UseVisualStyleBackColor = true;
-            this.AddToDictionary.Click += new System.EventHandler(this.AddToDictionary_Click);
-            // 
-            // ToHTMLDocButton
-            // 
-            this.ToHTMLDocButton.Location = new System.Drawing.Point(105, 46);
-            this.ToHTMLDocButton.Name = "ToHTMLDocButton";
-            this.ToHTMLDocButton.Size = new System.Drawing.Size(139, 23);
-            this.ToHTMLDocButton.TabIndex = 4;
-            this.ToHTMLDocButton.Text = "ToHTMLDocument";
-            this.ToHTMLDocButton.UseVisualStyleBackColor = true;
-            this.ToHTMLDocButton.Click += new System.EventHandler(this.ToHTMLDocButton_Click);
+            this.Update.Location = new System.Drawing.Point(87, 41);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(75, 23);
+            this.Update.TabIndex = 3;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // Main
             // 
@@ -734,6 +746,7 @@
         private System.Windows.Forms.Button ReadOutLoudButton;
         private System.Windows.Forms.Button AddToDictionary;
         private System.Windows.Forms.Button ToHTMLDocButton;
+        private System.Windows.Forms.Button Update;
     }
 }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -429,6 +430,11 @@ namespace TextStudio
             {
                 File.WriteAllText(saveFileDialog.FileName, converter.ToHtmlDocument(filepath,Editor));
             }
+        }
+
+        private void Update_Click(object sender, EventArgs e)
+        {
+            Process.Start(Environment.CurrentDirectory + "\\Updater.exe");
         }
     }
 }
