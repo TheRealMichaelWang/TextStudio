@@ -12,7 +12,6 @@ C:\Users\MichaelWang\source\repos\TextStudio\TextStudio\obj\Debug\TextStudio.Fro
 C:\Users\MichaelWang\source\repos\TextStudio\TextStudio\obj\Debug\TextStudio.FindText.resources
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\TextStudio.exe
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\TextStudio.pdb
-C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csprojAssemblyReference.cache
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.FindText.resources
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.FromUrl.resources
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.SourceDesigner.resources
