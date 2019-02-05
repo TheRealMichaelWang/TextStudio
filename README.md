@@ -1,2 +1,0 @@
-# TextStudio
-A word processor
