@@ -22,7 +22,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DisableDirPage=yes
 DisableProgramGroupPage=yes
-LicenseFile=C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\license.txt
+LicenseFile=C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\license.txt
 OutputDir=C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio
 OutputBaseFilename=TextStudioSetup
 Compression=lzma
@@ -36,9 +36,9 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\TextStudio.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\english.dic"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\Updater.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\TextStudio.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\english.dic"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\Updater.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

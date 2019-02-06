@@ -39,16 +39,16 @@ namespace TextStudio
             LoadBibliographyOptions();
             LoadHeaderFormatOptions();
             spellChecker.Load();
-            if(Environment.GetCommandLineArgs().Length == 1)
+            foreach(string args in Environment.GetCommandLineArgs())
             {
                 try
                 {
-                    Editor.LoadFile(Environment.GetCommandLineArgs()[0]);
-                    filepath = Environment.GetCommandLineArgs()[0];
+                    Editor.LoadFile(args);
+                    filepath = args;
                 }
                 catch
                 {
-                    MessageBox.Show("Invalid Document Format. Must be of RICH TEXT FORMAT. The file may have been corrupted, or you selected a invalid file.", "Text Editor", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
         }
