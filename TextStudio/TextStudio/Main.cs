@@ -434,7 +434,12 @@ namespace TextStudio
 
         private void Update_Click(object sender, EventArgs e)
         {
-            Process.Start(Environment.CurrentDirectory + "\\Updater.exe");
+            ProcessStartInfo proc = new ProcessStartInfo();
+            proc.UseShellExecute = true;
+            proc.WorkingDirectory = Environment.CurrentDirectory;
+            proc.FileName = Environment.CurrentDirectory + "\\Updater.exe";
+            proc.Verb = "runas";
+            Process.Start(proc);
         }
     }
 }
