@@ -45,6 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorCoder.cs" />
+    <Compile Include="EssayWriter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EssayWriter.Designer.cs">
+      <DependentUpon>EssayWriter.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindText.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +66,12 @@
     </Compile>
     <Compile Include="HeaderWizard.cs" />
     <Compile Include="HTMLConverter.cs" />
+    <Compile Include="RunProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunProgram.Designer.cs">
+      <DependentUpon>RunProgram.cs</DependentUpon>
+    </Compile>
     <Compile Include="SpeechWizard.cs" />
     <Compile Include="SourceDesigner.cs">
       <SubType>Form</SubType>
@@ -79,11 +92,17 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SpellChecker.cs" />
+    <EmbeddedResource Include="EssayWriter.resx">
+      <DependentUpon>EssayWriter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FindText.resx">
       <DependentUpon>FindText.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FromUrl.resx">
       <DependentUpon>FromUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunProgram.resx">
+      <DependentUpon>RunProgram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SourceDesigner.resx">
       <DependentUpon>SourceDesigner.cs</DependentUpon>

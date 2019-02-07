@@ -22,6 +22,8 @@ namespace TextStudio
         SpellChecker spellChecker;
         FindText finder;
         SpeechWizard speechWizard;
+        ColorCoder colorCoder;
+        EssayWriter essayWriter;
 
         public Main()
         {
@@ -32,6 +34,7 @@ namespace TextStudio
             spellChecker = new SpellChecker();
             finder = new FindText(ref Editor);
             speechWizard = new SpeechWizard();
+            colorCoder = new ColorCoder();
             this.WindowState = FormWindowState.Maximized;
             this.Text = "TextStudio -" + filepath;
             currentsyle = FontStyle.Regular;
@@ -39,10 +42,17 @@ namespace TextStudio
             LoadBibliographyOptions();
             LoadHeaderFormatOptions();
             spellChecker.Load();
-            foreach(string args in Environment.GetCommandLineArgs())
+            ZoomGroupBox.Hide();
+            HideCommandPalete();
+            foreach (string args in Environment.GetCommandLineArgs())
             {
                 try
                 {
+                    Editor.LoadFile(args);
+                    Editor.LoadFile(args);
+                    Editor.LoadFile(args);
+                    Editor.LoadFile(args);
+                    Editor.LoadFile(args);
                     Editor.LoadFile(args);
                     filepath = args;
                 }
@@ -51,6 +61,16 @@ namespace TextStudio
 
                 }
             }
+        }
+
+        public void HideCommandPalete()
+        {
+            CommandPaleteGroupBox.Hide();
+        }
+
+        public void ShowCommandPalete()
+        {
+            CommandPaleteGroupBox.Show();
         }
 
         public void LoadFonts()
@@ -99,7 +119,7 @@ namespace TextStudio
         private void Main_Resize(object sender, EventArgs e)
         {
             Editor.Width = this.Width-20;
-            Editor.Height = this.Height - 120;
+            Editor.Height = this.Height - 140;
             AllTabs.Width = this.Width;
         }
 
@@ -172,6 +192,7 @@ namespace TextStudio
                 Editor.SaveFile(filepath);
             }
             this.Text = "TextStudio -"+filepath;
+            HideCommandPalete();
         }
 
         private void OpenButton_Click(object sender, EventArgs e)
@@ -189,6 +210,7 @@ namespace TextStudio
                 }
             }
             this.Text = "TextStudio -" + filepath;
+            HideCommandPalete();
         }
 
         private void PrintButton_Click(object sender, EventArgs e)
@@ -376,6 +398,7 @@ namespace TextStudio
         {
             finder = new FindText(ref Editor);
             finder.Show();
+            CommandPaleteGroupBox.Hide();
         }
 
         private void ZoomFactor_Scroll(object sender, EventArgs e)
@@ -409,6 +432,17 @@ namespace TextStudio
                 {
                     OpenButton_Click(null, null);
                 }
+                if(e.KeyCode == Keys.OemQuestion||e.KeyCode == Keys.P)
+                {
+                    if (CommandPaleteGroupBox.Visible == true)
+                    {
+                        HideCommandPalete();
+                    }
+                    else
+                    {
+                        ShowCommandPalete();
+                    }
+                }
             }
             else if(e.Alt)
             {
@@ -420,6 +454,26 @@ namespace TextStudio
                 {
                     AllTabs.SelectedIndex = 1;
                 }
+                if(e.KeyCode == Keys.C)
+                {
+                    AllTabs.SelectedIndex = 2;
+                }
+                if (e.KeyCode == Keys.Z)
+                {
+                    if (!ZoomGroupBox.Visible)
+                    {
+                        ZoomGroupBox.Show();
+                    }
+                    else
+                    {
+                        ZoomGroupBox.Hide();
+                    }
+                }
+            }
+            else if (e.KeyCode == Keys.F5)
+            {
+                RunProgram runProgram = new RunProgram(filepath);
+                runProgram.Show();
             }
         }
 
@@ -452,6 +506,75 @@ namespace TextStudio
             proc.FileName = Environment.CurrentDirectory + "\\Updater.exe";
             proc.Verb = "runas";
             Process.Start(proc);
+        }
+
+        private void ColorCodeThesisButton_Click(object sender, EventArgs e)
+        {
+            colorCoder.ColorCode(Editor, ColorCodedEssayPart.Thesis);
+        }
+
+        private void ColorCodeTopicSentenceButton_Click(object sender, EventArgs e)
+        {
+            colorCoder.ColorCode(Editor, ColorCodedEssayPart.TopicSentence);
+        }
+
+        private void ColorCodeSupportingEvidence_Click(object sender, EventArgs e)
+        {
+            colorCoder.ColorCode(Editor, ColorCodedEssayPart.SupportingEvidence);
+        }
+
+        private void ColorCodeComentary_Click(object sender, EventArgs e)
+        {
+            colorCoder.ColorCode(Editor, ColorCodedEssayPart.Commentary);
+        }
+
+        private void ColorCodeClosingScentenceButton_Click(object sender, EventArgs e)
+        {
+            colorCoder.ColorCode(Editor, ColorCodedEssayPart.ClosingSentence);
+        }
+
+        private void ColorCodeThesisRestatement_Click(object sender, EventArgs e)
+        {
+            colorCoder.ColorCode(Editor, ColorCodedEssayPart.ThesisRestatement);
+        }
+
+        private void ColorCodeClincherButton_Click(object sender, EventArgs e)
+        {
+            colorCoder.ColorCode(Editor, ColorCodedEssayPart.Clincher);
+        }
+
+        private void EditorPasteButton_Click(object sender, EventArgs e)
+        {
+            Editor.Paste();
+            HideCommandPalete();
+        }
+
+        private void EditorCopyButton_Click(object sender, EventArgs e)
+        {
+            Editor.Copy();
+            HideCommandPalete();
+        }
+
+        private void EditorRedoButton_Click(object sender, EventArgs e)
+        {
+            Editor.Redo();
+            HideCommandPalete();
+        }
+
+        private void EditorUndoButton_Click(object sender, EventArgs e)
+        {
+            Editor.Undo();
+            HideCommandPalete();
+        }
+
+        private void WriteEssayButton_Click(object sender, EventArgs e)
+        {
+            essayWriter = new EssayWriter();
+            essayWriter.ShowDialog();
+            if(!string.IsNullOrEmpty(essayWriter.rtf))
+            {
+                this.Editor.Rtf = essayWriter.rtf;
+            }
         }
     }
 }

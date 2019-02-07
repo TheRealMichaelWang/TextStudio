@@ -21,3 +21,17 @@ C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudi
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csproj.CoreCompileInputs.cache
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.exe
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.pdb
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\TextStudio.exe
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\TextStudio.pdb
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csprojAssemblyReference.cache
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.FindText.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.FromUrl.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.SourceDesigner.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.Main.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.Properties.Resources.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csproj.GenerateResource.cache
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csproj.CoreCompileInputs.cache
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.exe
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.pdb
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.RunProgram.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.EssayWriter.resources

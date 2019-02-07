@@ -33,9 +33,8 @@
             this.SpeechGroupBox = new System.Windows.Forms.GroupBox();
             this.InsertSpeechButton = new System.Windows.Forms.Button();
             this.ReadOutLoudButton = new System.Windows.Forms.Button();
-            this.ZoomGroupBox = new System.Windows.Forms.GroupBox();
-            this.ZoomFactor = new System.Windows.Forms.TrackBar();
-            this.OtherToolsTab = new System.Windows.Forms.GroupBox();
+            this.OtherToolsGroupBox = new System.Windows.Forms.GroupBox();
+            this.Update = new System.Windows.Forms.Button();
             this.AddToDictionary = new System.Windows.Forms.Button();
             this.FindButton = new System.Windows.Forms.Button();
             this.SpellCheckButton = new System.Windows.Forms.Button();
@@ -59,8 +58,10 @@
             this.FontFamilySelection = new System.Windows.Forms.ComboBox();
             this.ItalicButton = new System.Windows.Forms.Button();
             this.UnderlineButton = new System.Windows.Forms.Button();
+            this.ZoomGroupBox = new System.Windows.Forms.GroupBox();
+            this.ZoomFactor = new System.Windows.Forms.TrackBar();
             this.AllTabs = new System.Windows.Forms.TabControl();
-            this.TextProcessingTab = new System.Windows.Forms.TabPage();
+            this.BibliographyAndHeaderTab = new System.Windows.Forms.TabPage();
             this.HeaderGroupBox = new System.Windows.Forms.GroupBox();
             this.HeaderFormatLabel = new System.Windows.Forms.Label();
             this.HeaderFormatInput = new System.Windows.Forms.ComboBox();
@@ -80,23 +81,46 @@
             this.CiteAllButton = new System.Windows.Forms.Button();
             this.BibliographyFormatSelector = new System.Windows.Forms.ComboBox();
             this.SourceViewer = new System.Windows.Forms.ComboBox();
+            this.ColorCodingTab = new System.Windows.Forms.TabPage();
+            this.ColorCoderConclusionGroupBox = new System.Windows.Forms.GroupBox();
+            this.ColorCodeClincherButton = new System.Windows.Forms.Button();
+            this.ColorCodeThesisRestatement = new System.Windows.Forms.Button();
+            this.ColorCoderBodyGroupBox = new System.Windows.Forms.GroupBox();
+            this.ColorCodeClosingScentenceButton = new System.Windows.Forms.Button();
+            this.ColorCodeComentary = new System.Windows.Forms.Button();
+            this.ColorCodeTopicSentenceButton = new System.Windows.Forms.Button();
+            this.ColorCodeSupportingEvidence = new System.Windows.Forms.Button();
+            this.ColorCoderIntoductonGroupBox = new System.Windows.Forms.GroupBox();
+            this.ColorCodeThesisButton = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.Update = new System.Windows.Forms.Button();
+            this.CommandPaleteGroupBox = new System.Windows.Forms.GroupBox();
+            this.EditorRedoButton = new System.Windows.Forms.Button();
+            this.EditorUndoButton = new System.Windows.Forms.Button();
+            this.CommandPaleteSaveButton = new System.Windows.Forms.Button();
+            this.EditorFindButton = new System.Windows.Forms.Button();
+            this.EditorCopyButton = new System.Windows.Forms.Button();
+            this.EditorPasteButton = new System.Windows.Forms.Button();
+            this.WriteEssayButton = new System.Windows.Forms.Button();
             this.HomeTab.SuspendLayout();
             this.SpeechGroupBox.SuspendLayout();
-            this.ZoomGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ZoomFactor)).BeginInit();
-            this.OtherToolsTab.SuspendLayout();
+            this.OtherToolsGroupBox.SuspendLayout();
             this.ImageTab.SuspendLayout();
             this.FileGroupBox.SuspendLayout();
             this.FontGroupBox.SuspendLayout();
+            this.ZoomGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ZoomFactor)).BeginInit();
             this.AllTabs.SuspendLayout();
-            this.TextProcessingTab.SuspendLayout();
+            this.BibliographyAndHeaderTab.SuspendLayout();
             this.HeaderGroupBox.SuspendLayout();
             this.BibliographyGroupBox.SuspendLayout();
+            this.ColorCodingTab.SuspendLayout();
+            this.ColorCoderConclusionGroupBox.SuspendLayout();
+            this.ColorCoderBodyGroupBox.SuspendLayout();
+            this.ColorCoderIntoductonGroupBox.SuspendLayout();
+            this.CommandPaleteGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // Editor
@@ -112,8 +136,7 @@
             // HomeTab
             // 
             this.HomeTab.Controls.Add(this.SpeechGroupBox);
-            this.HomeTab.Controls.Add(this.ZoomGroupBox);
-            this.HomeTab.Controls.Add(this.OtherToolsTab);
+            this.HomeTab.Controls.Add(this.OtherToolsGroupBox);
             this.HomeTab.Controls.Add(this.ImageTab);
             this.HomeTab.Controls.Add(this.FileGroupBox);
             this.HomeTab.Controls.Add(this.FontGroupBox);
@@ -129,7 +152,7 @@
             // 
             this.SpeechGroupBox.Controls.Add(this.InsertSpeechButton);
             this.SpeechGroupBox.Controls.Add(this.ReadOutLoudButton);
-            this.SpeechGroupBox.Location = new System.Drawing.Point(1127, 3);
+            this.SpeechGroupBox.Location = new System.Drawing.Point(1186, 3);
             this.SpeechGroupBox.Name = "SpeechGroupBox";
             this.SpeechGroupBox.Size = new System.Drawing.Size(168, 71);
             this.SpeechGroupBox.TabIndex = 11;
@@ -156,38 +179,29 @@
             this.ReadOutLoudButton.UseVisualStyleBackColor = true;
             this.ReadOutLoudButton.Click += new System.EventHandler(this.ReadOutLoudButton_Click);
             // 
-            // ZoomGroupBox
+            // OtherToolsGroupBox
             // 
-            this.ZoomGroupBox.Controls.Add(this.ZoomFactor);
-            this.ZoomGroupBox.Location = new System.Drawing.Point(1442, 3);
-            this.ZoomGroupBox.Name = "ZoomGroupBox";
-            this.ZoomGroupBox.Size = new System.Drawing.Size(168, 71);
-            this.ZoomGroupBox.TabIndex = 10;
-            this.ZoomGroupBox.TabStop = false;
-            this.ZoomGroupBox.Text = "Zoom";
+            this.OtherToolsGroupBox.Controls.Add(this.WriteEssayButton);
+            this.OtherToolsGroupBox.Controls.Add(this.Update);
+            this.OtherToolsGroupBox.Controls.Add(this.AddToDictionary);
+            this.OtherToolsGroupBox.Controls.Add(this.FindButton);
+            this.OtherToolsGroupBox.Controls.Add(this.SpellCheckButton);
+            this.OtherToolsGroupBox.Location = new System.Drawing.Point(938, 3);
+            this.OtherToolsGroupBox.Name = "OtherToolsGroupBox";
+            this.OtherToolsGroupBox.Size = new System.Drawing.Size(242, 71);
+            this.OtherToolsGroupBox.TabIndex = 9;
+            this.OtherToolsGroupBox.TabStop = false;
+            this.OtherToolsGroupBox.Text = "OtherTools";
             // 
-            // ZoomFactor
+            // Update
             // 
-            this.ZoomFactor.Location = new System.Drawing.Point(7, 19);
-            this.ZoomFactor.Minimum = 1;
-            this.ZoomFactor.Name = "ZoomFactor";
-            this.ZoomFactor.Size = new System.Drawing.Size(155, 45);
-            this.ZoomFactor.TabIndex = 0;
-            this.ZoomFactor.Value = 1;
-            this.ZoomFactor.Scroll += new System.EventHandler(this.ZoomFactor_Scroll);
-            // 
-            // OtherToolsTab
-            // 
-            this.OtherToolsTab.Controls.Add(this.Update);
-            this.OtherToolsTab.Controls.Add(this.AddToDictionary);
-            this.OtherToolsTab.Controls.Add(this.FindButton);
-            this.OtherToolsTab.Controls.Add(this.SpellCheckButton);
-            this.OtherToolsTab.Location = new System.Drawing.Point(953, 3);
-            this.OtherToolsTab.Name = "OtherToolsTab";
-            this.OtherToolsTab.Size = new System.Drawing.Size(168, 71);
-            this.OtherToolsTab.TabIndex = 9;
-            this.OtherToolsTab.TabStop = false;
-            this.OtherToolsTab.Text = "OtherTools";
+            this.Update.Location = new System.Drawing.Point(87, 41);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(75, 23);
+            this.Update.TabIndex = 3;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // AddToDictionary
             // 
@@ -223,7 +237,7 @@
             // 
             this.ImageTab.Controls.Add(this.InsertImageFromUri);
             this.ImageTab.Controls.Add(this.InsertImageFromFileButton);
-            this.ImageTab.Location = new System.Drawing.Point(779, 3);
+            this.ImageTab.Location = new System.Drawing.Point(764, 3);
             this.ImageTab.Name = "ImageTab";
             this.ImageTab.Size = new System.Drawing.Size(168, 71);
             this.ImageTab.TabIndex = 8;
@@ -257,7 +271,7 @@
             this.FileGroupBox.Controls.Add(this.PrintButton);
             this.FileGroupBox.Controls.Add(this.OpenButton);
             this.FileGroupBox.Controls.Add(this.SaveButton);
-            this.FileGroupBox.Location = new System.Drawing.Point(523, 3);
+            this.FileGroupBox.Location = new System.Drawing.Point(508, 3);
             this.FileGroupBox.Name = "FileGroupBox";
             this.FileGroupBox.Size = new System.Drawing.Size(250, 71);
             this.FileGroupBox.TabIndex = 7;
@@ -326,16 +340,16 @@
             this.FontGroupBox.Controls.Add(this.FontFamilySelection);
             this.FontGroupBox.Controls.Add(this.ItalicButton);
             this.FontGroupBox.Controls.Add(this.UnderlineButton);
-            this.FontGroupBox.Location = new System.Drawing.Point(6, 3);
+            this.FontGroupBox.Location = new System.Drawing.Point(3, 3);
             this.FontGroupBox.Name = "FontGroupBox";
-            this.FontGroupBox.Size = new System.Drawing.Size(511, 71);
+            this.FontGroupBox.Size = new System.Drawing.Size(499, 71);
             this.FontGroupBox.TabIndex = 6;
             this.FontGroupBox.TabStop = false;
             this.FontGroupBox.Text = "Font";
             // 
             // ChangeColor
             // 
-            this.ChangeColor.Location = new System.Drawing.Point(348, 17);
+            this.ChangeColor.Location = new System.Drawing.Point(334, 17);
             this.ChangeColor.Name = "ChangeColor";
             this.ChangeColor.Size = new System.Drawing.Size(77, 23);
             this.ChangeColor.TabIndex = 9;
@@ -345,7 +359,7 @@
             // 
             // RightButton
             // 
-            this.RightButton.Location = new System.Drawing.Point(431, 17);
+            this.RightButton.Location = new System.Drawing.Point(421, 17);
             this.RightButton.Name = "RightButton";
             this.RightButton.Size = new System.Drawing.Size(75, 23);
             this.RightButton.TabIndex = 8;
@@ -355,7 +369,7 @@
             // 
             // LeftButton
             // 
-            this.LeftButton.Location = new System.Drawing.Point(431, 46);
+            this.LeftButton.Location = new System.Drawing.Point(421, 46);
             this.LeftButton.Name = "LeftButton";
             this.LeftButton.Size = new System.Drawing.Size(75, 23);
             this.LeftButton.TabIndex = 7;
@@ -365,7 +379,7 @@
             // 
             // CenterButton
             // 
-            this.CenterButton.Location = new System.Drawing.Point(348, 46);
+            this.CenterButton.Location = new System.Drawing.Point(334, 46);
             this.CenterButton.Name = "CenterButton";
             this.CenterButton.Size = new System.Drawing.Size(75, 23);
             this.CenterButton.TabIndex = 6;
@@ -436,10 +450,31 @@
             this.UnderlineButton.UseVisualStyleBackColor = true;
             this.UnderlineButton.Click += new System.EventHandler(this.UnderlineButton_Click);
             // 
+            // ZoomGroupBox
+            // 
+            this.ZoomGroupBox.Controls.Add(this.ZoomFactor);
+            this.ZoomGroupBox.Location = new System.Drawing.Point(12, 131);
+            this.ZoomGroupBox.Name = "ZoomGroupBox";
+            this.ZoomGroupBox.Size = new System.Drawing.Size(168, 71);
+            this.ZoomGroupBox.TabIndex = 10;
+            this.ZoomGroupBox.TabStop = false;
+            this.ZoomGroupBox.Text = "Zoom";
+            // 
+            // ZoomFactor
+            // 
+            this.ZoomFactor.Location = new System.Drawing.Point(7, 19);
+            this.ZoomFactor.Minimum = 1;
+            this.ZoomFactor.Name = "ZoomFactor";
+            this.ZoomFactor.Size = new System.Drawing.Size(155, 45);
+            this.ZoomFactor.TabIndex = 0;
+            this.ZoomFactor.Value = 1;
+            this.ZoomFactor.Scroll += new System.EventHandler(this.ZoomFactor_Scroll);
+            // 
             // AllTabs
             // 
             this.AllTabs.Controls.Add(this.HomeTab);
-            this.AllTabs.Controls.Add(this.TextProcessingTab);
+            this.AllTabs.Controls.Add(this.BibliographyAndHeaderTab);
+            this.AllTabs.Controls.Add(this.ColorCodingTab);
             this.AllTabs.ItemSize = new System.Drawing.Size(50, 25);
             this.AllTabs.Location = new System.Drawing.Point(0, 1);
             this.AllTabs.Name = "AllTabs";
@@ -449,17 +484,17 @@
             this.AllTabs.Tag = "";
             this.AllTabs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
-            // TextProcessingTab
+            // BibliographyAndHeaderTab
             // 
-            this.TextProcessingTab.Controls.Add(this.HeaderGroupBox);
-            this.TextProcessingTab.Controls.Add(this.BibliographyGroupBox);
-            this.TextProcessingTab.Location = new System.Drawing.Point(4, 29);
-            this.TextProcessingTab.Name = "TextProcessingTab";
-            this.TextProcessingTab.Padding = new System.Windows.Forms.Padding(3);
-            this.TextProcessingTab.Size = new System.Drawing.Size(1653, 80);
-            this.TextProcessingTab.TabIndex = 2;
-            this.TextProcessingTab.Text = "TextProcessing";
-            this.TextProcessingTab.UseVisualStyleBackColor = true;
+            this.BibliographyAndHeaderTab.Controls.Add(this.HeaderGroupBox);
+            this.BibliographyAndHeaderTab.Controls.Add(this.BibliographyGroupBox);
+            this.BibliographyAndHeaderTab.Location = new System.Drawing.Point(4, 29);
+            this.BibliographyAndHeaderTab.Name = "BibliographyAndHeaderTab";
+            this.BibliographyAndHeaderTab.Padding = new System.Windows.Forms.Padding(3);
+            this.BibliographyAndHeaderTab.Size = new System.Drawing.Size(1653, 80);
+            this.BibliographyAndHeaderTab.TabIndex = 2;
+            this.BibliographyAndHeaderTab.Text = "Bibliography And Header";
+            this.BibliographyAndHeaderTab.UseVisualStyleBackColor = true;
             // 
             // HeaderGroupBox
             // 
@@ -645,45 +680,243 @@
             this.SourceViewer.Size = new System.Drawing.Size(339, 21);
             this.SourceViewer.TabIndex = 0;
             // 
+            // ColorCodingTab
+            // 
+            this.ColorCodingTab.Controls.Add(this.ColorCoderConclusionGroupBox);
+            this.ColorCodingTab.Controls.Add(this.ColorCoderBodyGroupBox);
+            this.ColorCodingTab.Controls.Add(this.ColorCoderIntoductonGroupBox);
+            this.ColorCodingTab.Location = new System.Drawing.Point(4, 29);
+            this.ColorCodingTab.Name = "ColorCodingTab";
+            this.ColorCodingTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ColorCodingTab.Size = new System.Drawing.Size(1653, 80);
+            this.ColorCodingTab.TabIndex = 3;
+            this.ColorCodingTab.Text = "ColorCoding";
+            this.ColorCodingTab.UseVisualStyleBackColor = true;
+            // 
+            // ColorCoderConclusionGroupBox
+            // 
+            this.ColorCoderConclusionGroupBox.Controls.Add(this.ColorCodeClincherButton);
+            this.ColorCoderConclusionGroupBox.Controls.Add(this.ColorCodeThesisRestatement);
+            this.ColorCoderConclusionGroupBox.Location = new System.Drawing.Point(567, 6);
+            this.ColorCoderConclusionGroupBox.Name = "ColorCoderConclusionGroupBox";
+            this.ColorCoderConclusionGroupBox.Size = new System.Drawing.Size(243, 68);
+            this.ColorCoderConclusionGroupBox.TabIndex = 6;
+            this.ColorCoderConclusionGroupBox.TabStop = false;
+            this.ColorCoderConclusionGroupBox.Text = "Conclusion";
+            // 
+            // ColorCodeClincherButton
+            // 
+            this.ColorCodeClincherButton.Location = new System.Drawing.Point(137, 22);
+            this.ColorCodeClincherButton.Name = "ColorCodeClincherButton";
+            this.ColorCodeClincherButton.Size = new System.Drawing.Size(100, 23);
+            this.ColorCodeClincherButton.TabIndex = 4;
+            this.ColorCodeClincherButton.Text = "Clincher";
+            this.ColorCodeClincherButton.UseVisualStyleBackColor = true;
+            this.ColorCodeClincherButton.Click += new System.EventHandler(this.ColorCodeClincherButton_Click);
+            // 
+            // ColorCodeThesisRestatement
+            // 
+            this.ColorCodeThesisRestatement.Location = new System.Drawing.Point(6, 22);
+            this.ColorCodeThesisRestatement.Name = "ColorCodeThesisRestatement";
+            this.ColorCodeThesisRestatement.Size = new System.Drawing.Size(125, 23);
+            this.ColorCodeThesisRestatement.TabIndex = 3;
+            this.ColorCodeThesisRestatement.Text = "ThesisRestatement";
+            this.ColorCodeThesisRestatement.UseVisualStyleBackColor = true;
+            this.ColorCodeThesisRestatement.Click += new System.EventHandler(this.ColorCodeThesisRestatement_Click);
+            // 
+            // ColorCoderBodyGroupBox
+            // 
+            this.ColorCoderBodyGroupBox.Controls.Add(this.ColorCodeClosingScentenceButton);
+            this.ColorCoderBodyGroupBox.Controls.Add(this.ColorCodeComentary);
+            this.ColorCoderBodyGroupBox.Controls.Add(this.ColorCodeTopicSentenceButton);
+            this.ColorCoderBodyGroupBox.Controls.Add(this.ColorCodeSupportingEvidence);
+            this.ColorCoderBodyGroupBox.Location = new System.Drawing.Point(104, 6);
+            this.ColorCoderBodyGroupBox.Name = "ColorCoderBodyGroupBox";
+            this.ColorCoderBodyGroupBox.Size = new System.Drawing.Size(457, 68);
+            this.ColorCoderBodyGroupBox.TabIndex = 5;
+            this.ColorCoderBodyGroupBox.TabStop = false;
+            this.ColorCoderBodyGroupBox.Text = "Body";
+            // 
+            // ColorCodeClosingScentenceButton
+            // 
+            this.ColorCodeClosingScentenceButton.Location = new System.Drawing.Point(349, 22);
+            this.ColorCodeClosingScentenceButton.Name = "ColorCodeClosingScentenceButton";
+            this.ColorCodeClosingScentenceButton.Size = new System.Drawing.Size(100, 23);
+            this.ColorCodeClosingScentenceButton.TabIndex = 4;
+            this.ColorCodeClosingScentenceButton.Text = "ClosingSentence";
+            this.ColorCodeClosingScentenceButton.UseVisualStyleBackColor = true;
+            this.ColorCodeClosingScentenceButton.Click += new System.EventHandler(this.ColorCodeClosingScentenceButton_Click);
+            // 
+            // ColorCodeComentary
+            // 
+            this.ColorCodeComentary.Location = new System.Drawing.Point(243, 22);
+            this.ColorCodeComentary.Name = "ColorCodeComentary";
+            this.ColorCodeComentary.Size = new System.Drawing.Size(100, 23);
+            this.ColorCodeComentary.TabIndex = 3;
+            this.ColorCodeComentary.Text = "Comentary";
+            this.ColorCodeComentary.UseVisualStyleBackColor = true;
+            this.ColorCodeComentary.Click += new System.EventHandler(this.ColorCodeComentary_Click);
+            // 
+            // ColorCodeTopicSentenceButton
+            // 
+            this.ColorCodeTopicSentenceButton.Location = new System.Drawing.Point(6, 22);
+            this.ColorCodeTopicSentenceButton.Name = "ColorCodeTopicSentenceButton";
+            this.ColorCodeTopicSentenceButton.Size = new System.Drawing.Size(100, 23);
+            this.ColorCodeTopicSentenceButton.TabIndex = 1;
+            this.ColorCodeTopicSentenceButton.Text = "TopicSentence";
+            this.ColorCodeTopicSentenceButton.UseVisualStyleBackColor = true;
+            this.ColorCodeTopicSentenceButton.Click += new System.EventHandler(this.ColorCodeTopicSentenceButton_Click);
+            // 
+            // ColorCodeSupportingEvidence
+            // 
+            this.ColorCodeSupportingEvidence.Location = new System.Drawing.Point(112, 22);
+            this.ColorCodeSupportingEvidence.Name = "ColorCodeSupportingEvidence";
+            this.ColorCodeSupportingEvidence.Size = new System.Drawing.Size(125, 23);
+            this.ColorCodeSupportingEvidence.TabIndex = 2;
+            this.ColorCodeSupportingEvidence.Text = "SupportingEvidence";
+            this.ColorCodeSupportingEvidence.UseVisualStyleBackColor = true;
+            this.ColorCodeSupportingEvidence.Click += new System.EventHandler(this.ColorCodeSupportingEvidence_Click);
+            // 
+            // ColorCoderIntoductonGroupBox
+            // 
+            this.ColorCoderIntoductonGroupBox.Controls.Add(this.ColorCodeThesisButton);
+            this.ColorCoderIntoductonGroupBox.Location = new System.Drawing.Point(8, 6);
+            this.ColorCoderIntoductonGroupBox.Name = "ColorCoderIntoductonGroupBox";
+            this.ColorCoderIntoductonGroupBox.Size = new System.Drawing.Size(90, 68);
+            this.ColorCoderIntoductonGroupBox.TabIndex = 4;
+            this.ColorCoderIntoductonGroupBox.TabStop = false;
+            this.ColorCoderIntoductonGroupBox.Text = "Intoduction";
+            // 
+            // ColorCodeThesisButton
+            // 
+            this.ColorCodeThesisButton.Location = new System.Drawing.Point(7, 22);
+            this.ColorCodeThesisButton.Name = "ColorCodeThesisButton";
+            this.ColorCodeThesisButton.Size = new System.Drawing.Size(75, 23);
+            this.ColorCodeThesisButton.TabIndex = 0;
+            this.ColorCodeThesisButton.Text = "Thesis";
+            this.ColorCodeThesisButton.UseVisualStyleBackColor = true;
+            this.ColorCodeThesisButton.Click += new System.EventHandler(this.ColorCodeThesisButton_Click);
+            // 
             // printDialog
             // 
             this.printDialog.UseEXDialog = true;
             // 
-            // Update
+            // CommandPaleteGroupBox
             // 
-            this.Update.Location = new System.Drawing.Point(87, 41);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 3;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
+            this.CommandPaleteGroupBox.Controls.Add(this.EditorRedoButton);
+            this.CommandPaleteGroupBox.Controls.Add(this.EditorUndoButton);
+            this.CommandPaleteGroupBox.Controls.Add(this.CommandPaleteSaveButton);
+            this.CommandPaleteGroupBox.Controls.Add(this.EditorFindButton);
+            this.CommandPaleteGroupBox.Controls.Add(this.EditorCopyButton);
+            this.CommandPaleteGroupBox.Controls.Add(this.EditorPasteButton);
+            this.CommandPaleteGroupBox.Location = new System.Drawing.Point(12, 131);
+            this.CommandPaleteGroupBox.Name = "CommandPaleteGroupBox";
+            this.CommandPaleteGroupBox.Size = new System.Drawing.Size(175, 108);
+            this.CommandPaleteGroupBox.TabIndex = 11;
+            this.CommandPaleteGroupBox.TabStop = false;
+            this.CommandPaleteGroupBox.Text = "CommandPalete";
+            // 
+            // EditorRedoButton
+            // 
+            this.EditorRedoButton.Location = new System.Drawing.Point(94, 78);
+            this.EditorRedoButton.Name = "EditorRedoButton";
+            this.EditorRedoButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorRedoButton.TabIndex = 5;
+            this.EditorRedoButton.Text = "Redo";
+            this.EditorRedoButton.UseVisualStyleBackColor = true;
+            this.EditorRedoButton.Click += new System.EventHandler(this.EditorRedoButton_Click);
+            // 
+            // EditorUndoButton
+            // 
+            this.EditorUndoButton.Location = new System.Drawing.Point(7, 77);
+            this.EditorUndoButton.Name = "EditorUndoButton";
+            this.EditorUndoButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorUndoButton.TabIndex = 4;
+            this.EditorUndoButton.Text = "Undo";
+            this.EditorUndoButton.UseVisualStyleBackColor = true;
+            // 
+            // CommandPaleteSaveButton
+            // 
+            this.CommandPaleteSaveButton.Location = new System.Drawing.Point(94, 49);
+            this.CommandPaleteSaveButton.Name = "CommandPaleteSaveButton";
+            this.CommandPaleteSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.CommandPaleteSaveButton.TabIndex = 3;
+            this.CommandPaleteSaveButton.Text = "Save";
+            this.CommandPaleteSaveButton.UseVisualStyleBackColor = true;
+            this.CommandPaleteSaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // EditorFindButton
+            // 
+            this.EditorFindButton.Location = new System.Drawing.Point(7, 49);
+            this.EditorFindButton.Name = "EditorFindButton";
+            this.EditorFindButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorFindButton.TabIndex = 2;
+            this.EditorFindButton.Text = "Find";
+            this.EditorFindButton.UseVisualStyleBackColor = true;
+            this.EditorFindButton.Click += new System.EventHandler(this.FindButton_Click);
+            // 
+            // EditorCopyButton
+            // 
+            this.EditorCopyButton.Location = new System.Drawing.Point(93, 20);
+            this.EditorCopyButton.Name = "EditorCopyButton";
+            this.EditorCopyButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorCopyButton.TabIndex = 1;
+            this.EditorCopyButton.Text = "Copy";
+            this.EditorCopyButton.UseVisualStyleBackColor = true;
+            this.EditorCopyButton.Click += new System.EventHandler(this.EditorCopyButton_Click);
+            // 
+            // EditorPasteButton
+            // 
+            this.EditorPasteButton.Location = new System.Drawing.Point(7, 20);
+            this.EditorPasteButton.Name = "EditorPasteButton";
+            this.EditorPasteButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorPasteButton.TabIndex = 0;
+            this.EditorPasteButton.Text = "Paste";
+            this.EditorPasteButton.UseVisualStyleBackColor = true;
+            this.EditorPasteButton.Click += new System.EventHandler(this.EditorPasteButton_Click);
+            // 
+            // WriteEssayButton
+            // 
+            this.WriteEssayButton.Location = new System.Drawing.Point(167, 13);
+            this.WriteEssayButton.Name = "WriteEssayButton";
+            this.WriteEssayButton.Size = new System.Drawing.Size(69, 23);
+            this.WriteEssayButton.TabIndex = 4;
+            this.WriteEssayButton.Text = "WriteEssay";
+            this.WriteEssayButton.UseVisualStyleBackColor = true;
+            this.WriteEssayButton.Click += new System.EventHandler(this.WriteEssayButton_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 736);
+            this.Controls.Add(this.CommandPaleteGroupBox);
             this.Controls.Add(this.AllTabs);
+            this.Controls.Add(this.ZoomGroupBox);
             this.Controls.Add(this.Editor);
             this.Name = "Main";
             this.Text = "TextStudio";
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.HomeTab.ResumeLayout(false);
             this.SpeechGroupBox.ResumeLayout(false);
-            this.ZoomGroupBox.ResumeLayout(false);
-            this.ZoomGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ZoomFactor)).EndInit();
-            this.OtherToolsTab.ResumeLayout(false);
+            this.OtherToolsGroupBox.ResumeLayout(false);
             this.ImageTab.ResumeLayout(false);
             this.FileGroupBox.ResumeLayout(false);
             this.FontGroupBox.ResumeLayout(false);
+            this.ZoomGroupBox.ResumeLayout(false);
+            this.ZoomGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ZoomFactor)).EndInit();
             this.AllTabs.ResumeLayout(false);
-            this.TextProcessingTab.ResumeLayout(false);
+            this.BibliographyAndHeaderTab.ResumeLayout(false);
             this.HeaderGroupBox.ResumeLayout(false);
             this.HeaderGroupBox.PerformLayout();
             this.BibliographyGroupBox.ResumeLayout(false);
             this.BibliographyGroupBox.PerformLayout();
+            this.ColorCodingTab.ResumeLayout(false);
+            this.ColorCoderConclusionGroupBox.ResumeLayout(false);
+            this.ColorCoderBodyGroupBox.ResumeLayout(false);
+            this.ColorCoderIntoductonGroupBox.ResumeLayout(false);
+            this.CommandPaleteGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -707,7 +940,7 @@
         private System.Windows.Forms.Button OpenButton;
         private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.PrintDialog printDialog;
-        private System.Windows.Forms.TabPage TextProcessingTab;
+        private System.Windows.Forms.TabPage BibliographyAndHeaderTab;
         private System.Windows.Forms.GroupBox BibliographyGroupBox;
         private System.Windows.Forms.Button AddSourceButton;
         private System.Windows.Forms.Button CiteAllButton;
@@ -734,7 +967,7 @@
         private System.Windows.Forms.Button ChangeColor;
         private System.Windows.Forms.ColorDialog colorDialog;
         private System.Windows.Forms.Button FetchFromURIButton;
-        private System.Windows.Forms.GroupBox OtherToolsTab;
+        private System.Windows.Forms.GroupBox OtherToolsGroupBox;
         private System.Windows.Forms.Button SpellCheckButton;
         private System.Windows.Forms.Button FindButton;
         private System.Windows.Forms.Label label2;
@@ -747,6 +980,25 @@
         private System.Windows.Forms.Button AddToDictionary;
         private System.Windows.Forms.Button ToHTMLDocButton;
         private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.TabPage ColorCodingTab;
+        private System.Windows.Forms.Button ColorCodeThesisButton;
+        private System.Windows.Forms.Button ColorCodeThesisRestatement;
+        private System.Windows.Forms.Button ColorCodeSupportingEvidence;
+        private System.Windows.Forms.Button ColorCodeTopicSentenceButton;
+        private System.Windows.Forms.GroupBox ColorCoderConclusionGroupBox;
+        private System.Windows.Forms.GroupBox ColorCoderBodyGroupBox;
+        private System.Windows.Forms.Button ColorCodeComentary;
+        private System.Windows.Forms.GroupBox ColorCoderIntoductonGroupBox;
+        private System.Windows.Forms.Button ColorCodeClincherButton;
+        private System.Windows.Forms.Button ColorCodeClosingScentenceButton;
+        private System.Windows.Forms.GroupBox CommandPaleteGroupBox;
+        private System.Windows.Forms.Button EditorFindButton;
+        private System.Windows.Forms.Button EditorCopyButton;
+        private System.Windows.Forms.Button EditorPasteButton;
+        private System.Windows.Forms.Button CommandPaleteSaveButton;
+        private System.Windows.Forms.Button EditorRedoButton;
+        private System.Windows.Forms.Button EditorUndoButton;
+        private System.Windows.Forms.Button WriteEssayButton;
     }
 }
 
