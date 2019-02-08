@@ -1,2 +1,13 @@
-Release Notes
--New Icon added.
+Update 2,2/7/2019
+-Convert to HTML document added.
+-Text To Speech and Speech to text added.
+-Essay Writer added.
+
+Update 1,1/20/2019
+-Bibliography Wizard Added
+-Header Wizard Added
+-Color coder added
+-Bug Fixes
+
+Initial Release,12/30/2018
+-Text Studio is released.
