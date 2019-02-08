@@ -24,6 +24,7 @@ namespace TextStudio
         SpeechWizard speechWizard;
         ColorCoder colorCoder;
         EssayWriter essayWriter;
+        ResearchHelper researchHelper;
 
         public Main()
         {
@@ -32,6 +33,7 @@ namespace TextStudio
             BibliographyWizard = new BibliographyWizard();
             HeaderWizard = new HeaderWizard();
             spellChecker = new SpellChecker();
+            researchHelper = new ResearchHelper();
             finder = new FindText(ref Editor);
             speechWizard = new SpeechWizard();
             colorCoder = new ColorCoder();
@@ -470,11 +472,6 @@ namespace TextStudio
                     }
                 }
             }
-            else if (e.KeyCode == Keys.F5)
-            {
-                RunProgram runProgram = new RunProgram(filepath);
-                runProgram.Show();
-            }
         }
 
         private void AddToDictionary_Click(object sender, EventArgs e)
@@ -575,6 +572,12 @@ namespace TextStudio
             {
                 this.Editor.Rtf = essayWriter.rtf;
             }
+        }
+
+        private void ResearchButton_Click(object sender, EventArgs e)
+        {
+            researchHelper = new ResearchHelper();
+            researchHelper.Show();
         }
     }
 }

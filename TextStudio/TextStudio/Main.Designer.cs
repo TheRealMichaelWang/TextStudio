@@ -34,6 +34,7 @@
             this.InsertSpeechButton = new System.Windows.Forms.Button();
             this.ReadOutLoudButton = new System.Windows.Forms.Button();
             this.OtherToolsGroupBox = new System.Windows.Forms.GroupBox();
+            this.WriteEssayButton = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
             this.AddToDictionary = new System.Windows.Forms.Button();
             this.FindButton = new System.Windows.Forms.Button();
@@ -103,7 +104,7 @@
             this.EditorFindButton = new System.Windows.Forms.Button();
             this.EditorCopyButton = new System.Windows.Forms.Button();
             this.EditorPasteButton = new System.Windows.Forms.Button();
-            this.WriteEssayButton = new System.Windows.Forms.Button();
+            this.ResearchButton = new System.Windows.Forms.Button();
             this.HomeTab.SuspendLayout();
             this.SpeechGroupBox.SuspendLayout();
             this.OtherToolsGroupBox.SuspendLayout();
@@ -181,6 +182,7 @@
             // 
             // OtherToolsGroupBox
             // 
+            this.OtherToolsGroupBox.Controls.Add(this.ResearchButton);
             this.OtherToolsGroupBox.Controls.Add(this.WriteEssayButton);
             this.OtherToolsGroupBox.Controls.Add(this.Update);
             this.OtherToolsGroupBox.Controls.Add(this.AddToDictionary);
@@ -192,6 +194,16 @@
             this.OtherToolsGroupBox.TabIndex = 9;
             this.OtherToolsGroupBox.TabStop = false;
             this.OtherToolsGroupBox.Text = "OtherTools";
+            // 
+            // WriteEssayButton
+            // 
+            this.WriteEssayButton.Location = new System.Drawing.Point(167, 13);
+            this.WriteEssayButton.Name = "WriteEssayButton";
+            this.WriteEssayButton.Size = new System.Drawing.Size(69, 23);
+            this.WriteEssayButton.TabIndex = 4;
+            this.WriteEssayButton.Text = "WriteEssay";
+            this.WriteEssayButton.UseVisualStyleBackColor = true;
+            this.WriteEssayButton.Click += new System.EventHandler(this.WriteEssayButton_Click);
             // 
             // Update
             // 
@@ -875,15 +887,15 @@
             this.EditorPasteButton.UseVisualStyleBackColor = true;
             this.EditorPasteButton.Click += new System.EventHandler(this.EditorPasteButton_Click);
             // 
-            // WriteEssayButton
+            // ResearchButton
             // 
-            this.WriteEssayButton.Location = new System.Drawing.Point(167, 13);
-            this.WriteEssayButton.Name = "WriteEssayButton";
-            this.WriteEssayButton.Size = new System.Drawing.Size(69, 23);
-            this.WriteEssayButton.TabIndex = 4;
-            this.WriteEssayButton.Text = "WriteEssay";
-            this.WriteEssayButton.UseVisualStyleBackColor = true;
-            this.WriteEssayButton.Click += new System.EventHandler(this.WriteEssayButton_Click);
+            this.ResearchButton.Location = new System.Drawing.Point(167, 42);
+            this.ResearchButton.Name = "ResearchButton";
+            this.ResearchButton.Size = new System.Drawing.Size(69, 23);
+            this.ResearchButton.TabIndex = 5;
+            this.ResearchButton.Text = "Research";
+            this.ResearchButton.UseVisualStyleBackColor = true;
+            this.ResearchButton.Click += new System.EventHandler(this.ResearchButton_Click);
             // 
             // Main
             // 
@@ -999,6 +1011,7 @@
         private System.Windows.Forms.Button EditorRedoButton;
         private System.Windows.Forms.Button EditorUndoButton;
         private System.Windows.Forms.Button WriteEssayButton;
+        private System.Windows.Forms.Button ResearchButton;
     }
 }
 

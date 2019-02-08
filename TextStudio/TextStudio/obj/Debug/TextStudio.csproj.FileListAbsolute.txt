@@ -33,8 +33,7 @@ C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio
 C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csproj.CoreCompileInputs.cache
 C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.exe
 C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.pdb
-C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.RunProgram.resources
 C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.EssayWriter.resources
-C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csprojAssemblyReference.cache
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.EssayWriter.resources
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.RunProgram.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.ResearchHelper.resources
