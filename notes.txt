@@ -1,13 +1,13 @@
-Update 2,2/7/2019
--Convert to HTML document added.
--Text To Speech and Speech to text added.
--Essay Writer added.
-
-Update 1,1/20/2019
--Bibliography Wizard Added
--Header Wizard Added
--Color coder added
--Bug Fixes
-
-Initial Release,12/30/2018
+Update 2,2/7/2019<br>
+-Convert to HTML document added.<br>
+-Text To Speech and Speech to text added.<br>
+-Essay Writer added.<br>
+<br>
+Update 1,1/20/2019<br>
+-Bibliography Wizard Added<br>
+-Header Wizard Added<br>
+-Color coder added<br>
+-Bug Fixes<br>
+<br>
+Initial Release,12/30/2018<br>
 -Text Studio is released.
