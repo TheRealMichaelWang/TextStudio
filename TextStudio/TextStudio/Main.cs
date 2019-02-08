@@ -479,13 +479,13 @@ namespace TextStudio
 
         private void AddToDictionary_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(Editor.SelectedText) && !Editor.Text.Contains(" "))
+            if (!string.IsNullOrEmpty(Editor.SelectedText))
             {
-                spellChecker.words.Add(Editor.SelectedText);
+                spellChecker.words.Add(Editor.SelectedText.ToLower());
             }
             else
             {
-                MessageBox.Show("Select a word. Words cannot include spaces.","TextEditor SpellChecker",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Select a word.","TextEditor SpellChecker",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 

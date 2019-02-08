@@ -6,3 +6,4 @@ C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\o
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.csproj.CoreCompileInputs.cache
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.exe
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.pdb
+C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.UpdateInfo.resources
