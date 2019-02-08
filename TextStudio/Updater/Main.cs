@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Updater
@@ -43,6 +44,7 @@ namespace Updater
             {
                 MessageBox.Show(ex.Message,"TextStudio Updater",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+            Thread.Sleep(1000);
             updateInfo = new UpdateInfo(info);
             this.Close();
         }
