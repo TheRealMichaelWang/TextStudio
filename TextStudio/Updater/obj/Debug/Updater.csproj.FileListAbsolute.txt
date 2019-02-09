@@ -7,3 +7,13 @@ C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\o
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.exe
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.pdb
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.UpdateInfo.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\Updater.exe
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\Updater.pdb
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.csprojAssemblyReference.cache
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.Main.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.Properties.Resources.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.UpdateInfo.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.csproj.GenerateResource.cache
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.csproj.CoreCompileInputs.cache
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.exe
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\Updater\obj\Debug\Updater.pdb
