@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Editor = new System.Windows.Forms.RichTextBox();
             this.HomeTab = new System.Windows.Forms.TabPage();
             this.SpeechGroupBox = new System.Windows.Forms.GroupBox();
             this.InsertSpeechButton = new System.Windows.Forms.Button();
             this.ReadOutLoudButton = new System.Windows.Forms.Button();
             this.OtherToolsGroupBox = new System.Windows.Forms.GroupBox();
+            this.ResearchButton = new System.Windows.Forms.Button();
             this.WriteEssayButton = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
             this.AddToDictionary = new System.Windows.Forms.Button();
@@ -104,7 +106,6 @@
             this.EditorFindButton = new System.Windows.Forms.Button();
             this.EditorCopyButton = new System.Windows.Forms.Button();
             this.EditorPasteButton = new System.Windows.Forms.Button();
-            this.ResearchButton = new System.Windows.Forms.Button();
             this.HomeTab.SuspendLayout();
             this.SpeechGroupBox.SuspendLayout();
             this.OtherToolsGroupBox.SuspendLayout();
@@ -194,6 +195,16 @@
             this.OtherToolsGroupBox.TabIndex = 9;
             this.OtherToolsGroupBox.TabStop = false;
             this.OtherToolsGroupBox.Text = "OtherTools";
+            // 
+            // ResearchButton
+            // 
+            this.ResearchButton.Location = new System.Drawing.Point(167, 42);
+            this.ResearchButton.Name = "ResearchButton";
+            this.ResearchButton.Size = new System.Drawing.Size(69, 23);
+            this.ResearchButton.TabIndex = 5;
+            this.ResearchButton.Text = "Research";
+            this.ResearchButton.UseVisualStyleBackColor = true;
+            this.ResearchButton.Click += new System.EventHandler(this.ResearchButton_Click);
             // 
             // WriteEssayButton
             // 
@@ -887,16 +898,6 @@
             this.EditorPasteButton.UseVisualStyleBackColor = true;
             this.EditorPasteButton.Click += new System.EventHandler(this.EditorPasteButton_Click);
             // 
-            // ResearchButton
-            // 
-            this.ResearchButton.Location = new System.Drawing.Point(167, 42);
-            this.ResearchButton.Name = "ResearchButton";
-            this.ResearchButton.Size = new System.Drawing.Size(69, 23);
-            this.ResearchButton.TabIndex = 5;
-            this.ResearchButton.Text = "Research";
-            this.ResearchButton.UseVisualStyleBackColor = true;
-            this.ResearchButton.Click += new System.EventHandler(this.ResearchButton_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -906,6 +907,7 @@
             this.Controls.Add(this.AllTabs);
             this.Controls.Add(this.ZoomGroupBox);
             this.Controls.Add(this.Editor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "TextStudio";
             this.Resize += new System.EventHandler(this.Main_Resize);
