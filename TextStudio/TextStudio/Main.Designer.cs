@@ -84,6 +84,13 @@
             this.CiteAllButton = new System.Windows.Forms.Button();
             this.BibliographyFormatSelector = new System.Windows.Forms.ComboBox();
             this.SourceViewer = new System.Windows.Forms.ComboBox();
+            this.SharingAndMailingTab = new System.Windows.Forms.TabPage();
+            this.FileSharingGroupBox = new System.Windows.Forms.GroupBox();
+            this.MergeWithTxtFileButton = new System.Windows.Forms.Button();
+            this.ExportToPublicDocumentsFolderButton = new System.Windows.Forms.Button();
+            this.MailingGroupBox = new System.Windows.Forms.GroupBox();
+            this.RecieveMail = new System.Windows.Forms.Button();
+            this.MailToButton = new System.Windows.Forms.Button();
             this.ColorCodingTab = new System.Windows.Forms.TabPage();
             this.ColorCoderConclusionGroupBox = new System.Windows.Forms.GroupBox();
             this.ColorCodeClincherButton = new System.Windows.Forms.Button();
@@ -106,6 +113,7 @@
             this.EditorFindButton = new System.Windows.Forms.Button();
             this.EditorCopyButton = new System.Windows.Forms.Button();
             this.EditorPasteButton = new System.Windows.Forms.Button();
+            this.MergeWithEmailButton = new System.Windows.Forms.Button();
             this.HomeTab.SuspendLayout();
             this.SpeechGroupBox.SuspendLayout();
             this.OtherToolsGroupBox.SuspendLayout();
@@ -118,6 +126,9 @@
             this.BibliographyAndHeaderTab.SuspendLayout();
             this.HeaderGroupBox.SuspendLayout();
             this.BibliographyGroupBox.SuspendLayout();
+            this.SharingAndMailingTab.SuspendLayout();
+            this.FileSharingGroupBox.SuspendLayout();
+            this.MailingGroupBox.SuspendLayout();
             this.ColorCodingTab.SuspendLayout();
             this.ColorCoderConclusionGroupBox.SuspendLayout();
             this.ColorCoderBodyGroupBox.SuspendLayout();
@@ -497,6 +508,7 @@
             // 
             this.AllTabs.Controls.Add(this.HomeTab);
             this.AllTabs.Controls.Add(this.BibliographyAndHeaderTab);
+            this.AllTabs.Controls.Add(this.SharingAndMailingTab);
             this.AllTabs.Controls.Add(this.ColorCodingTab);
             this.AllTabs.ItemSize = new System.Drawing.Size(50, 25);
             this.AllTabs.Location = new System.Drawing.Point(0, 1);
@@ -703,6 +715,80 @@
             this.SourceViewer.Size = new System.Drawing.Size(339, 21);
             this.SourceViewer.TabIndex = 0;
             // 
+            // SharingAndMailingTab
+            // 
+            this.SharingAndMailingTab.Controls.Add(this.FileSharingGroupBox);
+            this.SharingAndMailingTab.Controls.Add(this.MailingGroupBox);
+            this.SharingAndMailingTab.Location = new System.Drawing.Point(4, 29);
+            this.SharingAndMailingTab.Name = "SharingAndMailingTab";
+            this.SharingAndMailingTab.Size = new System.Drawing.Size(1653, 80);
+            this.SharingAndMailingTab.TabIndex = 4;
+            this.SharingAndMailingTab.Text = "Share and Mail";
+            this.SharingAndMailingTab.UseVisualStyleBackColor = true;
+            // 
+            // FileSharingGroupBox
+            // 
+            this.FileSharingGroupBox.Controls.Add(this.MergeWithEmailButton);
+            this.FileSharingGroupBox.Controls.Add(this.MergeWithTxtFileButton);
+            this.FileSharingGroupBox.Controls.Add(this.ExportToPublicDocumentsFolderButton);
+            this.FileSharingGroupBox.Location = new System.Drawing.Point(176, 4);
+            this.FileSharingGroupBox.Name = "FileSharingGroupBox";
+            this.FileSharingGroupBox.Size = new System.Drawing.Size(480, 64);
+            this.FileSharingGroupBox.TabIndex = 1;
+            this.FileSharingGroupBox.TabStop = false;
+            this.FileSharingGroupBox.Text = "FileSharing";
+            // 
+            // MergeWithTxtFileButton
+            // 
+            this.MergeWithTxtFileButton.Location = new System.Drawing.Point(196, 19);
+            this.MergeWithTxtFileButton.Name = "MergeWithTxtFileButton";
+            this.MergeWithTxtFileButton.Size = new System.Drawing.Size(135, 23);
+            this.MergeWithTxtFileButton.TabIndex = 1;
+            this.MergeWithTxtFileButton.Text = "Merge With Text File";
+            this.MergeWithTxtFileButton.UseVisualStyleBackColor = true;
+            this.MergeWithTxtFileButton.Click += new System.EventHandler(this.MergeWithTxtFileButton_Click);
+            // 
+            // ExportToPublicDocumentsFolderButton
+            // 
+            this.ExportToPublicDocumentsFolderButton.Location = new System.Drawing.Point(6, 19);
+            this.ExportToPublicDocumentsFolderButton.Name = "ExportToPublicDocumentsFolderButton";
+            this.ExportToPublicDocumentsFolderButton.Size = new System.Drawing.Size(184, 23);
+            this.ExportToPublicDocumentsFolderButton.TabIndex = 0;
+            this.ExportToPublicDocumentsFolderButton.Text = "Export To Public Documents Folder";
+            this.ExportToPublicDocumentsFolderButton.UseVisualStyleBackColor = true;
+            this.ExportToPublicDocumentsFolderButton.Click += new System.EventHandler(this.ExportToPublicDocumentsFolderButton_Click);
+            // 
+            // MailingGroupBox
+            // 
+            this.MailingGroupBox.Controls.Add(this.RecieveMail);
+            this.MailingGroupBox.Controls.Add(this.MailToButton);
+            this.MailingGroupBox.Location = new System.Drawing.Point(4, 4);
+            this.MailingGroupBox.Name = "MailingGroupBox";
+            this.MailingGroupBox.Size = new System.Drawing.Size(166, 64);
+            this.MailingGroupBox.TabIndex = 0;
+            this.MailingGroupBox.TabStop = false;
+            this.MailingGroupBox.Text = "Mail";
+            // 
+            // RecieveMail
+            // 
+            this.RecieveMail.Location = new System.Drawing.Point(85, 19);
+            this.RecieveMail.Name = "RecieveMail";
+            this.RecieveMail.Size = new System.Drawing.Size(75, 23);
+            this.RecieveMail.TabIndex = 1;
+            this.RecieveMail.Text = "Recieve";
+            this.RecieveMail.UseVisualStyleBackColor = true;
+            this.RecieveMail.Click += new System.EventHandler(this.RecieveMail_Click);
+            // 
+            // MailToButton
+            // 
+            this.MailToButton.Location = new System.Drawing.Point(4, 19);
+            this.MailToButton.Name = "MailToButton";
+            this.MailToButton.Size = new System.Drawing.Size(75, 23);
+            this.MailToButton.TabIndex = 0;
+            this.MailToButton.Text = "MailTo";
+            this.MailToButton.UseVisualStyleBackColor = true;
+            this.MailToButton.Click += new System.EventHandler(this.MailToButton_Click);
+            // 
             // ColorCodingTab
             // 
             this.ColorCodingTab.Controls.Add(this.ColorCoderConclusionGroupBox);
@@ -898,6 +984,16 @@
             this.EditorPasteButton.UseVisualStyleBackColor = true;
             this.EditorPasteButton.Click += new System.EventHandler(this.EditorPasteButton_Click);
             // 
+            // MergeWithEmailButton
+            // 
+            this.MergeWithEmailButton.Location = new System.Drawing.Point(337, 19);
+            this.MergeWithEmailButton.Name = "MergeWithEmailButton";
+            this.MergeWithEmailButton.Size = new System.Drawing.Size(135, 23);
+            this.MergeWithEmailButton.TabIndex = 2;
+            this.MergeWithEmailButton.Text = "Merge With Email";
+            this.MergeWithEmailButton.UseVisualStyleBackColor = true;
+            this.MergeWithEmailButton.Click += new System.EventHandler(this.MergeWithEmailButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -926,6 +1022,9 @@
             this.HeaderGroupBox.PerformLayout();
             this.BibliographyGroupBox.ResumeLayout(false);
             this.BibliographyGroupBox.PerformLayout();
+            this.SharingAndMailingTab.ResumeLayout(false);
+            this.FileSharingGroupBox.ResumeLayout(false);
+            this.MailingGroupBox.ResumeLayout(false);
             this.ColorCodingTab.ResumeLayout(false);
             this.ColorCoderConclusionGroupBox.ResumeLayout(false);
             this.ColorCoderBodyGroupBox.ResumeLayout(false);
@@ -1014,6 +1113,14 @@
         private System.Windows.Forms.Button EditorUndoButton;
         private System.Windows.Forms.Button WriteEssayButton;
         private System.Windows.Forms.Button ResearchButton;
+        private System.Windows.Forms.TabPage SharingAndMailingTab;
+        private System.Windows.Forms.GroupBox MailingGroupBox;
+        private System.Windows.Forms.Button MailToButton;
+        private System.Windows.Forms.GroupBox FileSharingGroupBox;
+        private System.Windows.Forms.Button ExportToPublicDocumentsFolderButton;
+        private System.Windows.Forms.Button MergeWithTxtFileButton;
+        private System.Windows.Forms.Button RecieveMail;
+        private System.Windows.Forms.Button MergeWithEmailButton;
     }
 }
 

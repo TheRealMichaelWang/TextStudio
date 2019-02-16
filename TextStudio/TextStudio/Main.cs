@@ -25,6 +25,7 @@ namespace TextStudio
         ColorCoder colorCoder;
         EssayWriter essayWriter;
         ResearchHelper researchHelper;
+        Merger merger;
 
         public Main()
         {
@@ -37,6 +38,7 @@ namespace TextStudio
             finder = new FindText(ref Editor);
             speechWizard = new SpeechWizard();
             colorCoder = new ColorCoder();
+            merger = new Merger();
             this.WindowState = FormWindowState.Maximized;
             this.Text = "TextStudio -" + filepath;
             currentsyle = FontStyle.Regular;
@@ -203,10 +205,10 @@ namespace TextStudio
             {
                 try
                 {
-                    Editor.LoadFile(filepath);
                     filepath = openFileDialog.FileName;
+                    Editor.Rtf = File.ReadAllText(filepath);
                 }
-                catch
+                catch(Exception ex)
                 {
                     MessageBox.Show("Invalid Document Format. Must be of RICH TEXT FORMAT. The file may have been corrupted, or you selected a invalid file.", "Text Editor", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -434,6 +436,10 @@ namespace TextStudio
                 {
                     OpenButton_Click(null, null);
                 }
+                if(e.KeyCode == Keys.M)
+                {
+                    MailToButton_Click(null, null);
+                }
                 if(e.KeyCode == Keys.OemQuestion||e.KeyCode == Keys.P)
                 {
                     if (CommandPaleteGroupBox.Visible == true)
@@ -456,9 +462,13 @@ namespace TextStudio
                 {
                     AllTabs.SelectedIndex = 1;
                 }
-                if(e.KeyCode == Keys.C)
+                if(e.KeyCode == Keys.M)
                 {
                     AllTabs.SelectedIndex = 2;
+                }
+                if(e.KeyCode == Keys.C)
+                {
+                    AllTabs.SelectedIndex = 3;
                 }
                 if (e.KeyCode == Keys.Z)
                 {
@@ -578,6 +588,56 @@ namespace TextStudio
         {
             researchHelper = new ResearchHelper();
             researchHelper.Show();
+        }
+
+        private void MailToButton_Click(object sender, EventArgs e)
+        {
+            MailToWizard mailToWizard = new MailToWizard(filepath, Editor);
+            mailToWizard.ShowDialog();
+        }
+
+        private void ExportToPublicDocumentsFolderButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FileInfo file = new FileInfo(filepath);
+                Editor.SaveFile(Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments) + "\\"+file.Name+".rtf");
+            }
+            catch
+            {
+                MessageBox.Show("Save your file first", "TextStudio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void MergeWithTxtFileButton_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string[] tomerge = File.ReadAllLines(openFileDialog.FileName);
+                    merger.MergeText(ref Editor, tomerge);
+                }
+                catch
+                {
+                    MessageBox.Show("An error occured", "TextStudio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void RecieveMail_Click(object sender, EventArgs e)
+        {
+            RecieveEmail recieveEmail = new RecieveEmail(ref Editor);
+        }
+
+        private void MergeWithEmailButton_Click(object sender, EventArgs e)
+        {
+            string[] tomerge = null;
+            RecieveEmail recieveEmail = new RecieveEmail(ref tomerge);
+            if(tomerge!=null)
+            {
+                merger.MergeText(ref Editor, tomerge);
+            }
         }
     }
 }

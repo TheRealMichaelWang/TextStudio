@@ -35,8 +35,12 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenPop, Version=2.0.6.1120, Culture=neutral, PublicKeyToken=6bdb97f144b7efc8, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenPop.NET.2.0.6.1120\lib\net40\OpenPop.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -69,6 +73,25 @@
     </Compile>
     <Compile Include="HeaderWizard.cs" />
     <Compile Include="HTMLConverter.cs" />
+    <Compile Include="MailToWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailToWizard.Designer.cs">
+      <DependentUpon>MailToWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MergeLinePrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MergeLinePrompt.Designer.cs">
+      <DependentUpon>MergeLinePrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Merger.cs" />
+    <Compile Include="RecieveEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecieveEmail.Designer.cs">
+      <DependentUpon>RecieveEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResearchHelper.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +127,15 @@
     <EmbeddedResource Include="FromUrl.resx">
       <DependentUpon>FromUrl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MailToWizard.resx">
+      <DependentUpon>MailToWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MergeLinePrompt.resx">
+      <DependentUpon>MergeLinePrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecieveEmail.resx">
+      <DependentUpon>RecieveEmail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResearchHelper.resx">
       <DependentUpon>ResearchHelper.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +154,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
