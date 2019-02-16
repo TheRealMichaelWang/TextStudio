@@ -1,3 +1,7 @@
+Update 3,2/16/2019<br>
+-Email Tools added<br>
+-Document Merging added<br>
+<br>
 Update 2,2/7/2019<br>
 -Convert to HTML document added.<br>
 -Text To Speech and Speech to text added.<br>
