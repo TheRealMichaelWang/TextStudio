@@ -34,9 +34,11 @@ namespace Updater
             {
                 byte[] appdata = webClient.DownloadData("https://raw.githubusercontent.com/TheRealMichaelWang/TextStudio/files/TextStudio.exe");
                 byte[] dicdata = webClient.DownloadData("https://raw.githubusercontent.com/TheRealMichaelWang/TextStudio/files/english.dic");
+                byte[] syndata = webClient.DownloadData("https://raw.githubusercontent.com/TheRealMichaelWang/TextStudio/files/synonyms.dic");
                 info = webClient.DownloadString("https://raw.githubusercontent.com/TheRealMichaelWang/TextStudio/master/notes.txt");
                 File.WriteAllBytes(Environment.CurrentDirectory + "\\TextStudio.exe",appdata);
                 File.WriteAllBytes(Environment.CurrentDirectory + "\\english.dic", dicdata);
+                File.WriteAllBytes(Environment.CurrentDirectory + "\\synonyms.dic", syndata);
                 MessageBox.Show("Update Fnished", "TextStudio Updater", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Process.Start(Environment.CurrentDirectory + "\\TextStudio.exe");
             }

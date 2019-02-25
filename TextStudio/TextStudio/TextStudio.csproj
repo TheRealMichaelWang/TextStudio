@@ -42,6 +42,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +74,12 @@
     </Compile>
     <Compile Include="HeaderWizard.cs" />
     <Compile Include="HTMLConverter.cs" />
+    <Compile Include="InsertTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertTable.Designer.cs">
+      <DependentUpon>InsertTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="MailToWizard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +99,7 @@
     <Compile Include="RecieveEmail.Designer.cs">
       <DependentUpon>RecieveEmail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rephraser.cs" />
     <Compile Include="ResearchHelper.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FromUrl.resx">
       <DependentUpon>FromUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertTable.resx">
+      <DependentUpon>InsertTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MailToWizard.resx">
       <DependentUpon>MailToWizard.cs</DependentUpon>

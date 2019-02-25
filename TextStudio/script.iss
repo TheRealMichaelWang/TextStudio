@@ -40,6 +40,7 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 Source: "C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\TextStudio.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\english.dic"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\Updater.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\synonyms.dic"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\icon.ico"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

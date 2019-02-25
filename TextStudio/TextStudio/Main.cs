@@ -26,6 +26,7 @@ namespace TextStudio
         EssayWriter essayWriter;
         ResearchHelper researchHelper;
         Merger merger;
+        Rephraser rephraser;
 
         public Main()
         {
@@ -39,6 +40,7 @@ namespace TextStudio
             speechWizard = new SpeechWizard();
             colorCoder = new ColorCoder();
             merger = new Merger();
+            rephraser = new Rephraser();
             this.WindowState = FormWindowState.Maximized;
             this.Text = "TextStudio -" + filepath;
             currentsyle = FontStyle.Regular;
@@ -52,11 +54,6 @@ namespace TextStudio
             {
                 try
                 {
-                    Editor.LoadFile(args);
-                    Editor.LoadFile(args);
-                    Editor.LoadFile(args);
-                    Editor.LoadFile(args);
-                    Editor.LoadFile(args);
                     Editor.LoadFile(args);
                     filepath = args;
                 }
@@ -638,6 +635,27 @@ namespace TextStudio
             {
                 merger.MergeText(ref Editor, tomerge);
             }
+        }
+
+        private void RephraseTextButton_Click(object sender, EventArgs e)
+        {
+            rephraser.Rephrase(ref Editor);
+        }
+
+        private void InsertTableNow_Click(object sender, EventArgs e)
+        {
+            InsertTable insertTable = new InsertTable();
+            insertTable.ShowDialog();
+            if(insertTable.bitmap!=null)
+            {
+                Clipboard.SetImage(insertTable.bitmap);
+                Editor.Paste();
+            }
+        }
+
+        private void InsertCopyrightNoticeButton_Click(object sender, EventArgs e)
+        {
+            Editor.Text = Editor.Text + "\r\nCopyright © " +CopyrightYearInput.Text + " " + CopyrightNoticeNameInput.Text;
         }
     }
 }

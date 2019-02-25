@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Editor = new System.Windows.Forms.RichTextBox();
             this.HomeTab = new System.Windows.Forms.TabPage();
+            this.InsertTableGroupBox = new System.Windows.Forms.GroupBox();
+            this.InsertTableNow = new System.Windows.Forms.Button();
             this.SpeechGroupBox = new System.Windows.Forms.GroupBox();
             this.InsertSpeechButton = new System.Windows.Forms.Button();
             this.ReadOutLoudButton = new System.Windows.Forms.Button();
@@ -86,11 +88,16 @@
             this.SourceViewer = new System.Windows.Forms.ComboBox();
             this.SharingAndMailingTab = new System.Windows.Forms.TabPage();
             this.FileSharingGroupBox = new System.Windows.Forms.GroupBox();
+            this.MergeWithEmailButton = new System.Windows.Forms.Button();
             this.MergeWithTxtFileButton = new System.Windows.Forms.Button();
             this.ExportToPublicDocumentsFolderButton = new System.Windows.Forms.Button();
             this.MailingGroupBox = new System.Windows.Forms.GroupBox();
             this.RecieveMail = new System.Windows.Forms.Button();
             this.MailToButton = new System.Windows.Forms.Button();
+            this.PlagiarismTab = new System.Windows.Forms.TabPage();
+            this.CopyrightNoticeGroupBox = new System.Windows.Forms.GroupBox();
+            this.RephrasingToolsGroupBox = new System.Windows.Forms.GroupBox();
+            this.RephraseTextButton = new System.Windows.Forms.Button();
             this.ColorCodingTab = new System.Windows.Forms.TabPage();
             this.ColorCoderConclusionGroupBox = new System.Windows.Forms.GroupBox();
             this.ColorCodeClincherButton = new System.Windows.Forms.Button();
@@ -113,8 +120,13 @@
             this.EditorFindButton = new System.Windows.Forms.Button();
             this.EditorCopyButton = new System.Windows.Forms.Button();
             this.EditorPasteButton = new System.Windows.Forms.Button();
-            this.MergeWithEmailButton = new System.Windows.Forms.Button();
+            this.CopyrightNoticeNameInput = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CopyrightYearInput = new System.Windows.Forms.TextBox();
+            this.InsertCopyrightNoticeButton = new System.Windows.Forms.Button();
             this.HomeTab.SuspendLayout();
+            this.InsertTableGroupBox.SuspendLayout();
             this.SpeechGroupBox.SuspendLayout();
             this.OtherToolsGroupBox.SuspendLayout();
             this.ImageTab.SuspendLayout();
@@ -129,6 +141,9 @@
             this.SharingAndMailingTab.SuspendLayout();
             this.FileSharingGroupBox.SuspendLayout();
             this.MailingGroupBox.SuspendLayout();
+            this.PlagiarismTab.SuspendLayout();
+            this.CopyrightNoticeGroupBox.SuspendLayout();
+            this.RephrasingToolsGroupBox.SuspendLayout();
             this.ColorCodingTab.SuspendLayout();
             this.ColorCoderConclusionGroupBox.SuspendLayout();
             this.ColorCoderBodyGroupBox.SuspendLayout();
@@ -148,6 +163,7 @@
             // 
             // HomeTab
             // 
+            this.HomeTab.Controls.Add(this.InsertTableGroupBox);
             this.HomeTab.Controls.Add(this.SpeechGroupBox);
             this.HomeTab.Controls.Add(this.OtherToolsGroupBox);
             this.HomeTab.Controls.Add(this.ImageTab);
@@ -161,13 +177,33 @@
             this.HomeTab.Text = "Home";
             this.HomeTab.UseVisualStyleBackColor = true;
             // 
+            // InsertTableGroupBox
+            // 
+            this.InsertTableGroupBox.Controls.Add(this.InsertTableNow);
+            this.InsertTableGroupBox.Location = new System.Drawing.Point(858, 3);
+            this.InsertTableGroupBox.Name = "InsertTableGroupBox";
+            this.InsertTableGroupBox.Size = new System.Drawing.Size(86, 71);
+            this.InsertTableGroupBox.TabIndex = 12;
+            this.InsertTableGroupBox.TabStop = false;
+            this.InsertTableGroupBox.Text = "Insert Table";
+            // 
+            // InsertTableNow
+            // 
+            this.InsertTableNow.Location = new System.Drawing.Point(6, 13);
+            this.InsertTableNow.Name = "InsertTableNow";
+            this.InsertTableNow.Size = new System.Drawing.Size(75, 23);
+            this.InsertTableNow.TabIndex = 12;
+            this.InsertTableNow.Text = "Now";
+            this.InsertTableNow.UseVisualStyleBackColor = true;
+            this.InsertTableNow.Click += new System.EventHandler(this.InsertTableNow_Click);
+            // 
             // SpeechGroupBox
             // 
             this.SpeechGroupBox.Controls.Add(this.InsertSpeechButton);
             this.SpeechGroupBox.Controls.Add(this.ReadOutLoudButton);
-            this.SpeechGroupBox.Location = new System.Drawing.Point(1186, 3);
+            this.SpeechGroupBox.Location = new System.Drawing.Point(1258, 3);
             this.SpeechGroupBox.Name = "SpeechGroupBox";
-            this.SpeechGroupBox.Size = new System.Drawing.Size(168, 71);
+            this.SpeechGroupBox.Size = new System.Drawing.Size(96, 71);
             this.SpeechGroupBox.TabIndex = 11;
             this.SpeechGroupBox.TabStop = false;
             this.SpeechGroupBox.Text = "Speech";
@@ -176,7 +212,7 @@
             // 
             this.InsertSpeechButton.Location = new System.Drawing.Point(6, 42);
             this.InsertSpeechButton.Name = "InsertSpeechButton";
-            this.InsertSpeechButton.Size = new System.Drawing.Size(156, 23);
+            this.InsertSpeechButton.Size = new System.Drawing.Size(84, 23);
             this.InsertSpeechButton.TabIndex = 1;
             this.InsertSpeechButton.Text = "InsertSpeech";
             this.InsertSpeechButton.UseVisualStyleBackColor = true;
@@ -186,7 +222,7 @@
             // 
             this.ReadOutLoudButton.Location = new System.Drawing.Point(6, 13);
             this.ReadOutLoudButton.Name = "ReadOutLoudButton";
-            this.ReadOutLoudButton.Size = new System.Drawing.Size(156, 23);
+            this.ReadOutLoudButton.Size = new System.Drawing.Size(84, 23);
             this.ReadOutLoudButton.TabIndex = 0;
             this.ReadOutLoudButton.Text = "ReadOutLoud";
             this.ReadOutLoudButton.UseVisualStyleBackColor = true;
@@ -200,9 +236,9 @@
             this.OtherToolsGroupBox.Controls.Add(this.AddToDictionary);
             this.OtherToolsGroupBox.Controls.Add(this.FindButton);
             this.OtherToolsGroupBox.Controls.Add(this.SpellCheckButton);
-            this.OtherToolsGroupBox.Location = new System.Drawing.Point(938, 3);
+            this.OtherToolsGroupBox.Location = new System.Drawing.Point(950, 3);
             this.OtherToolsGroupBox.Name = "OtherToolsGroupBox";
-            this.OtherToolsGroupBox.Size = new System.Drawing.Size(242, 71);
+            this.OtherToolsGroupBox.Size = new System.Drawing.Size(302, 71);
             this.OtherToolsGroupBox.TabIndex = 9;
             this.OtherToolsGroupBox.TabStop = false;
             this.OtherToolsGroupBox.Text = "OtherTools";
@@ -273,14 +309,14 @@
             this.ImageTab.Controls.Add(this.InsertImageFromFileButton);
             this.ImageTab.Location = new System.Drawing.Point(764, 3);
             this.ImageTab.Name = "ImageTab";
-            this.ImageTab.Size = new System.Drawing.Size(168, 71);
+            this.ImageTab.Size = new System.Drawing.Size(88, 71);
             this.ImageTab.TabIndex = 8;
             this.ImageTab.TabStop = false;
             this.ImageTab.Text = "Insert Image";
             // 
             // InsertImageFromUri
             // 
-            this.InsertImageFromUri.Location = new System.Drawing.Point(88, 20);
+            this.InsertImageFromUri.Location = new System.Drawing.Point(6, 42);
             this.InsertImageFromUri.Name = "InsertImageFromUri";
             this.InsertImageFromUri.Size = new System.Drawing.Size(75, 23);
             this.InsertImageFromUri.TabIndex = 1;
@@ -290,7 +326,7 @@
             // 
             // InsertImageFromFileButton
             // 
-            this.InsertImageFromFileButton.Location = new System.Drawing.Point(7, 20);
+            this.InsertImageFromFileButton.Location = new System.Drawing.Point(6, 13);
             this.InsertImageFromFileButton.Name = "InsertImageFromFileButton";
             this.InsertImageFromFileButton.Size = new System.Drawing.Size(75, 23);
             this.InsertImageFromFileButton.TabIndex = 0;
@@ -314,7 +350,7 @@
             // 
             // ToHTMLDocButton
             // 
-            this.ToHTMLDocButton.Location = new System.Drawing.Point(105, 46);
+            this.ToHTMLDocButton.Location = new System.Drawing.Point(105, 41);
             this.ToHTMLDocButton.Name = "ToHTMLDocButton";
             this.ToHTMLDocButton.Size = new System.Drawing.Size(139, 23);
             this.ToHTMLDocButton.TabIndex = 4;
@@ -324,7 +360,7 @@
             // 
             // FetchFromURIButton
             // 
-            this.FetchFromURIButton.Location = new System.Drawing.Point(7, 46);
+            this.FetchFromURIButton.Location = new System.Drawing.Point(7, 41);
             this.FetchFromURIButton.Name = "FetchFromURIButton";
             this.FetchFromURIButton.Size = new System.Drawing.Size(92, 23);
             this.FetchFromURIButton.TabIndex = 3;
@@ -334,7 +370,7 @@
             // 
             // PrintButton
             // 
-            this.PrintButton.Location = new System.Drawing.Point(169, 20);
+            this.PrintButton.Location = new System.Drawing.Point(169, 13);
             this.PrintButton.Name = "PrintButton";
             this.PrintButton.Size = new System.Drawing.Size(75, 23);
             this.PrintButton.TabIndex = 2;
@@ -344,7 +380,7 @@
             // 
             // OpenButton
             // 
-            this.OpenButton.Location = new System.Drawing.Point(88, 20);
+            this.OpenButton.Location = new System.Drawing.Point(88, 13);
             this.OpenButton.Name = "OpenButton";
             this.OpenButton.Size = new System.Drawing.Size(75, 23);
             this.OpenButton.TabIndex = 1;
@@ -354,7 +390,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(7, 20);
+            this.SaveButton.Location = new System.Drawing.Point(7, 13);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
             this.SaveButton.TabIndex = 0;
@@ -383,7 +419,7 @@
             // 
             // ChangeColor
             // 
-            this.ChangeColor.Location = new System.Drawing.Point(334, 17);
+            this.ChangeColor.Location = new System.Drawing.Point(335, 13);
             this.ChangeColor.Name = "ChangeColor";
             this.ChangeColor.Size = new System.Drawing.Size(77, 23);
             this.ChangeColor.TabIndex = 9;
@@ -393,7 +429,7 @@
             // 
             // RightButton
             // 
-            this.RightButton.Location = new System.Drawing.Point(421, 17);
+            this.RightButton.Location = new System.Drawing.Point(418, 13);
             this.RightButton.Name = "RightButton";
             this.RightButton.Size = new System.Drawing.Size(75, 23);
             this.RightButton.TabIndex = 8;
@@ -403,7 +439,7 @@
             // 
             // LeftButton
             // 
-            this.LeftButton.Location = new System.Drawing.Point(421, 46);
+            this.LeftButton.Location = new System.Drawing.Point(418, 41);
             this.LeftButton.Name = "LeftButton";
             this.LeftButton.Size = new System.Drawing.Size(75, 23);
             this.LeftButton.TabIndex = 7;
@@ -413,7 +449,7 @@
             // 
             // CenterButton
             // 
-            this.CenterButton.Location = new System.Drawing.Point(334, 46);
+            this.CenterButton.Location = new System.Drawing.Point(334, 41);
             this.CenterButton.Name = "CenterButton";
             this.CenterButton.Size = new System.Drawing.Size(75, 23);
             this.CenterButton.TabIndex = 6;
@@ -423,7 +459,7 @@
             // 
             // BoldButton
             // 
-            this.BoldButton.Location = new System.Drawing.Point(2, 46);
+            this.BoldButton.Location = new System.Drawing.Point(5, 41);
             this.BoldButton.Name = "BoldButton";
             this.BoldButton.Size = new System.Drawing.Size(75, 23);
             this.BoldButton.TabIndex = 2;
@@ -434,7 +470,7 @@
             // FontSizeSelection
             // 
             this.FontSizeSelection.FormattingEnabled = true;
-            this.FontSizeSelection.Location = new System.Drawing.Point(232, 19);
+            this.FontSizeSelection.Location = new System.Drawing.Point(233, 15);
             this.FontSizeSelection.Name = "FontSizeSelection";
             this.FontSizeSelection.Size = new System.Drawing.Size(96, 21);
             this.FontSizeSelection.TabIndex = 1;
@@ -444,7 +480,7 @@
             // 
             // RegularButton
             // 
-            this.RegularButton.Location = new System.Drawing.Point(245, 46);
+            this.RegularButton.Location = new System.Drawing.Point(245, 41);
             this.RegularButton.Name = "RegularButton";
             this.RegularButton.Size = new System.Drawing.Size(75, 23);
             this.RegularButton.TabIndex = 5;
@@ -458,7 +494,7 @@
             this.FontFamilySelection.DropDownWidth = 274;
             this.FontFamilySelection.FormattingEnabled = true;
             this.FontFamilySelection.IntegralHeight = false;
-            this.FontFamilySelection.Location = new System.Drawing.Point(2, 19);
+            this.FontFamilySelection.Location = new System.Drawing.Point(5, 15);
             this.FontFamilySelection.Name = "FontFamilySelection";
             this.FontFamilySelection.Size = new System.Drawing.Size(224, 21);
             this.FontFamilySelection.TabIndex = 0;
@@ -466,7 +502,7 @@
             // 
             // ItalicButton
             // 
-            this.ItalicButton.Location = new System.Drawing.Point(164, 46);
+            this.ItalicButton.Location = new System.Drawing.Point(164, 41);
             this.ItalicButton.Name = "ItalicButton";
             this.ItalicButton.Size = new System.Drawing.Size(75, 23);
             this.ItalicButton.TabIndex = 4;
@@ -476,7 +512,7 @@
             // 
             // UnderlineButton
             // 
-            this.UnderlineButton.Location = new System.Drawing.Point(83, 46);
+            this.UnderlineButton.Location = new System.Drawing.Point(83, 41);
             this.UnderlineButton.Name = "UnderlineButton";
             this.UnderlineButton.Size = new System.Drawing.Size(75, 23);
             this.UnderlineButton.TabIndex = 3;
@@ -509,6 +545,7 @@
             this.AllTabs.Controls.Add(this.HomeTab);
             this.AllTabs.Controls.Add(this.BibliographyAndHeaderTab);
             this.AllTabs.Controls.Add(this.SharingAndMailingTab);
+            this.AllTabs.Controls.Add(this.PlagiarismTab);
             this.AllTabs.Controls.Add(this.ColorCodingTab);
             this.AllTabs.ItemSize = new System.Drawing.Size(50, 25);
             this.AllTabs.Location = new System.Drawing.Point(0, 1);
@@ -738,6 +775,16 @@
             this.FileSharingGroupBox.TabStop = false;
             this.FileSharingGroupBox.Text = "FileSharing";
             // 
+            // MergeWithEmailButton
+            // 
+            this.MergeWithEmailButton.Location = new System.Drawing.Point(337, 19);
+            this.MergeWithEmailButton.Name = "MergeWithEmailButton";
+            this.MergeWithEmailButton.Size = new System.Drawing.Size(135, 23);
+            this.MergeWithEmailButton.TabIndex = 2;
+            this.MergeWithEmailButton.Text = "Merge With Email";
+            this.MergeWithEmailButton.UseVisualStyleBackColor = true;
+            this.MergeWithEmailButton.Click += new System.EventHandler(this.MergeWithEmailButton_Click);
+            // 
             // MergeWithTxtFileButton
             // 
             this.MergeWithTxtFileButton.Location = new System.Drawing.Point(196, 19);
@@ -788,6 +835,51 @@
             this.MailToButton.Text = "MailTo";
             this.MailToButton.UseVisualStyleBackColor = true;
             this.MailToButton.Click += new System.EventHandler(this.MailToButton_Click);
+            // 
+            // PlagiarismTab
+            // 
+            this.PlagiarismTab.Controls.Add(this.CopyrightNoticeGroupBox);
+            this.PlagiarismTab.Controls.Add(this.RephrasingToolsGroupBox);
+            this.PlagiarismTab.Location = new System.Drawing.Point(4, 29);
+            this.PlagiarismTab.Name = "PlagiarismTab";
+            this.PlagiarismTab.Size = new System.Drawing.Size(1653, 80);
+            this.PlagiarismTab.TabIndex = 5;
+            this.PlagiarismTab.Text = "Plagiarism";
+            this.PlagiarismTab.UseVisualStyleBackColor = true;
+            // 
+            // CopyrightNoticeGroupBox
+            // 
+            this.CopyrightNoticeGroupBox.Controls.Add(this.InsertCopyrightNoticeButton);
+            this.CopyrightNoticeGroupBox.Controls.Add(this.CopyrightYearInput);
+            this.CopyrightNoticeGroupBox.Controls.Add(this.label4);
+            this.CopyrightNoticeGroupBox.Controls.Add(this.label3);
+            this.CopyrightNoticeGroupBox.Controls.Add(this.CopyrightNoticeNameInput);
+            this.CopyrightNoticeGroupBox.Location = new System.Drawing.Point(139, 4);
+            this.CopyrightNoticeGroupBox.Name = "CopyrightNoticeGroupBox";
+            this.CopyrightNoticeGroupBox.Size = new System.Drawing.Size(402, 73);
+            this.CopyrightNoticeGroupBox.TabIndex = 1;
+            this.CopyrightNoticeGroupBox.TabStop = false;
+            this.CopyrightNoticeGroupBox.Text = "CopyrightNotice";
+            // 
+            // RephrasingToolsGroupBox
+            // 
+            this.RephrasingToolsGroupBox.Controls.Add(this.RephraseTextButton);
+            this.RephrasingToolsGroupBox.Location = new System.Drawing.Point(8, 4);
+            this.RephrasingToolsGroupBox.Name = "RephrasingToolsGroupBox";
+            this.RephrasingToolsGroupBox.Size = new System.Drawing.Size(124, 73);
+            this.RephrasingToolsGroupBox.TabIndex = 0;
+            this.RephrasingToolsGroupBox.TabStop = false;
+            this.RephrasingToolsGroupBox.Text = "Rephrase Text";
+            // 
+            // RephraseTextButton
+            // 
+            this.RephraseTextButton.Location = new System.Drawing.Point(6, 19);
+            this.RephraseTextButton.Name = "RephraseTextButton";
+            this.RephraseTextButton.Size = new System.Drawing.Size(112, 23);
+            this.RephraseTextButton.TabIndex = 0;
+            this.RephraseTextButton.Text = "RephraseText";
+            this.RephraseTextButton.UseVisualStyleBackColor = true;
+            this.RephraseTextButton.Click += new System.EventHandler(this.RephraseTextButton_Click);
             // 
             // ColorCodingTab
             // 
@@ -984,15 +1076,47 @@
             this.EditorPasteButton.UseVisualStyleBackColor = true;
             this.EditorPasteButton.Click += new System.EventHandler(this.EditorPasteButton_Click);
             // 
-            // MergeWithEmailButton
+            // CopyrightNoticeNameInput
             // 
-            this.MergeWithEmailButton.Location = new System.Drawing.Point(337, 19);
-            this.MergeWithEmailButton.Name = "MergeWithEmailButton";
-            this.MergeWithEmailButton.Size = new System.Drawing.Size(135, 23);
-            this.MergeWithEmailButton.TabIndex = 2;
-            this.MergeWithEmailButton.Text = "Merge With Email";
-            this.MergeWithEmailButton.UseVisualStyleBackColor = true;
-            this.MergeWithEmailButton.Click += new System.EventHandler(this.MergeWithEmailButton_Click);
+            this.CopyrightNoticeNameInput.Location = new System.Drawing.Point(51, 21);
+            this.CopyrightNoticeNameInput.Name = "CopyrightNoticeNameInput";
+            this.CopyrightNoticeNameInput.Size = new System.Drawing.Size(345, 20);
+            this.CopyrightNoticeNameInput.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Name:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Year:";
+            // 
+            // CopyrightYearInput
+            // 
+            this.CopyrightYearInput.Location = new System.Drawing.Point(51, 47);
+            this.CopyrightYearInput.Name = "CopyrightYearInput";
+            this.CopyrightYearInput.Size = new System.Drawing.Size(166, 20);
+            this.CopyrightYearInput.TabIndex = 3;
+            // 
+            // InsertCopyrightNoticeButton
+            // 
+            this.InsertCopyrightNoticeButton.Location = new System.Drawing.Point(321, 45);
+            this.InsertCopyrightNoticeButton.Name = "InsertCopyrightNoticeButton";
+            this.InsertCopyrightNoticeButton.Size = new System.Drawing.Size(75, 23);
+            this.InsertCopyrightNoticeButton.TabIndex = 4;
+            this.InsertCopyrightNoticeButton.Text = "Insert Notice";
+            this.InsertCopyrightNoticeButton.UseVisualStyleBackColor = true;
+            this.InsertCopyrightNoticeButton.Click += new System.EventHandler(this.InsertCopyrightNoticeButton_Click);
             // 
             // Main
             // 
@@ -1008,6 +1132,7 @@
             this.Text = "TextStudio";
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.HomeTab.ResumeLayout(false);
+            this.InsertTableGroupBox.ResumeLayout(false);
             this.SpeechGroupBox.ResumeLayout(false);
             this.OtherToolsGroupBox.ResumeLayout(false);
             this.ImageTab.ResumeLayout(false);
@@ -1025,6 +1150,10 @@
             this.SharingAndMailingTab.ResumeLayout(false);
             this.FileSharingGroupBox.ResumeLayout(false);
             this.MailingGroupBox.ResumeLayout(false);
+            this.PlagiarismTab.ResumeLayout(false);
+            this.CopyrightNoticeGroupBox.ResumeLayout(false);
+            this.CopyrightNoticeGroupBox.PerformLayout();
+            this.RephrasingToolsGroupBox.ResumeLayout(false);
             this.ColorCodingTab.ResumeLayout(false);
             this.ColorCoderConclusionGroupBox.ResumeLayout(false);
             this.ColorCoderBodyGroupBox.ResumeLayout(false);
@@ -1121,6 +1250,17 @@
         private System.Windows.Forms.Button MergeWithTxtFileButton;
         private System.Windows.Forms.Button RecieveMail;
         private System.Windows.Forms.Button MergeWithEmailButton;
+        private System.Windows.Forms.TabPage PlagiarismTab;
+        private System.Windows.Forms.GroupBox RephrasingToolsGroupBox;
+        private System.Windows.Forms.Button RephraseTextButton;
+        private System.Windows.Forms.GroupBox InsertTableGroupBox;
+        private System.Windows.Forms.Button InsertTableNow;
+        private System.Windows.Forms.GroupBox CopyrightNoticeGroupBox;
+        private System.Windows.Forms.Button InsertCopyrightNoticeButton;
+        private System.Windows.Forms.TextBox CopyrightYearInput;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox CopyrightNoticeNameInput;
     }
 }
 
