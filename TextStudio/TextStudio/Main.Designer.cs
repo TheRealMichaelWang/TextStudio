@@ -28,20 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Editor = new System.Windows.Forms.RichTextBox();
             this.HomeTab = new System.Windows.Forms.TabPage();
+            this.InsertTableGroupBox = new System.Windows.Forms.GroupBox();
+            this.InsertTableNow = new System.Windows.Forms.Button();
             this.SpeechGroupBox = new System.Windows.Forms.GroupBox();
             this.InsertSpeechButton = new System.Windows.Forms.Button();
             this.ReadOutLoudButton = new System.Windows.Forms.Button();
-            this.ZoomGroupBox = new System.Windows.Forms.GroupBox();
-            this.ZoomFactor = new System.Windows.Forms.TrackBar();
-            this.OtherToolsTab = new System.Windows.Forms.GroupBox();
+            this.OtherToolsGroupBox = new System.Windows.Forms.GroupBox();
+            this.ResearchButton = new System.Windows.Forms.Button();
+            this.WriteEssayButton = new System.Windows.Forms.Button();
+            this.Update = new System.Windows.Forms.Button();
+            this.AddToDictionary = new System.Windows.Forms.Button();
             this.FindButton = new System.Windows.Forms.Button();
             this.SpellCheckButton = new System.Windows.Forms.Button();
             this.ImageTab = new System.Windows.Forms.GroupBox();
             this.InsertImageFromUri = new System.Windows.Forms.Button();
             this.InsertImageFromFileButton = new System.Windows.Forms.Button();
             this.FileGroupBox = new System.Windows.Forms.GroupBox();
+            this.ToHTMLDocButton = new System.Windows.Forms.Button();
             this.FetchFromURIButton = new System.Windows.Forms.Button();
             this.PrintButton = new System.Windows.Forms.Button();
             this.OpenButton = new System.Windows.Forms.Button();
@@ -57,8 +63,10 @@
             this.FontFamilySelection = new System.Windows.Forms.ComboBox();
             this.ItalicButton = new System.Windows.Forms.Button();
             this.UnderlineButton = new System.Windows.Forms.Button();
+            this.ZoomGroupBox = new System.Windows.Forms.GroupBox();
+            this.ZoomFactor = new System.Windows.Forms.TrackBar();
             this.AllTabs = new System.Windows.Forms.TabControl();
-            this.TextProcessingTab = new System.Windows.Forms.TabPage();
+            this.BibliographyAndHeaderTab = new System.Windows.Forms.TabPage();
             this.HeaderGroupBox = new System.Windows.Forms.GroupBox();
             this.HeaderFormatLabel = new System.Windows.Forms.Label();
             this.HeaderFormatInput = new System.Windows.Forms.ComboBox();
@@ -78,24 +86,63 @@
             this.CiteAllButton = new System.Windows.Forms.Button();
             this.BibliographyFormatSelector = new System.Windows.Forms.ComboBox();
             this.SourceViewer = new System.Windows.Forms.ComboBox();
+            this.SharingAndMailingTab = new System.Windows.Forms.TabPage();
+            this.MailFormating = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.MailFormatFromInput = new System.Windows.Forms.TextBox();
+            this.FileSharingGroupBox = new System.Windows.Forms.GroupBox();
+            this.MergeWithEmailButton = new System.Windows.Forms.Button();
+            this.MergeWithTxtFileButton = new System.Windows.Forms.Button();
+            this.ExportToPublicDocumentsFolderButton = new System.Windows.Forms.Button();
+            this.MailingGroupBox = new System.Windows.Forms.GroupBox();
+            this.RecieveMail = new System.Windows.Forms.Button();
+            this.MailToButton = new System.Windows.Forms.Button();
+            this.PlagiarismTab = new System.Windows.Forms.TabPage();
+            this.CopyrightNoticeGroupBox = new System.Windows.Forms.GroupBox();
+            this.InsertCopyrightNoticeButton = new System.Windows.Forms.Button();
+            this.CopyrightYearInput = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CopyrightNoticeNameInput = new System.Windows.Forms.TextBox();
+            this.RephrasingToolsGroupBox = new System.Windows.Forms.GroupBox();
+            this.RephraseTextButton = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.AddToDictionary = new System.Windows.Forms.Button();
-            this.ToHTMLDocButton = new System.Windows.Forms.Button();
+            this.CommandPaleteGroupBox = new System.Windows.Forms.GroupBox();
+            this.EditorRedoButton = new System.Windows.Forms.Button();
+            this.EditorUndoButton = new System.Windows.Forms.Button();
+            this.CommandPaleteSaveButton = new System.Windows.Forms.Button();
+            this.EditorFindButton = new System.Windows.Forms.Button();
+            this.EditorCopyButton = new System.Windows.Forms.Button();
+            this.EditorPasteButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.MailFormatToInput = new System.Windows.Forms.TextBox();
+            this.SetYourAdressButton = new System.Windows.Forms.Button();
+            this.SetRecieverAdressButton = new System.Windows.Forms.Button();
+            this.FormatAsLetterButton = new System.Windows.Forms.Button();
             this.HomeTab.SuspendLayout();
+            this.InsertTableGroupBox.SuspendLayout();
             this.SpeechGroupBox.SuspendLayout();
-            this.ZoomGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ZoomFactor)).BeginInit();
-            this.OtherToolsTab.SuspendLayout();
+            this.OtherToolsGroupBox.SuspendLayout();
             this.ImageTab.SuspendLayout();
             this.FileGroupBox.SuspendLayout();
             this.FontGroupBox.SuspendLayout();
+            this.ZoomGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ZoomFactor)).BeginInit();
             this.AllTabs.SuspendLayout();
-            this.TextProcessingTab.SuspendLayout();
+            this.BibliographyAndHeaderTab.SuspendLayout();
             this.HeaderGroupBox.SuspendLayout();
             this.BibliographyGroupBox.SuspendLayout();
+            this.SharingAndMailingTab.SuspendLayout();
+            this.MailFormating.SuspendLayout();
+            this.FileSharingGroupBox.SuspendLayout();
+            this.MailingGroupBox.SuspendLayout();
+            this.PlagiarismTab.SuspendLayout();
+            this.CopyrightNoticeGroupBox.SuspendLayout();
+            this.RephrasingToolsGroupBox.SuspendLayout();
+            this.CommandPaleteGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // Editor
@@ -110,9 +157,9 @@
             // 
             // HomeTab
             // 
+            this.HomeTab.Controls.Add(this.InsertTableGroupBox);
             this.HomeTab.Controls.Add(this.SpeechGroupBox);
-            this.HomeTab.Controls.Add(this.ZoomGroupBox);
-            this.HomeTab.Controls.Add(this.OtherToolsTab);
+            this.HomeTab.Controls.Add(this.OtherToolsGroupBox);
             this.HomeTab.Controls.Add(this.ImageTab);
             this.HomeTab.Controls.Add(this.FileGroupBox);
             this.HomeTab.Controls.Add(this.FontGroupBox);
@@ -124,13 +171,33 @@
             this.HomeTab.Text = "Home";
             this.HomeTab.UseVisualStyleBackColor = true;
             // 
+            // InsertTableGroupBox
+            // 
+            this.InsertTableGroupBox.Controls.Add(this.InsertTableNow);
+            this.InsertTableGroupBox.Location = new System.Drawing.Point(858, 3);
+            this.InsertTableGroupBox.Name = "InsertTableGroupBox";
+            this.InsertTableGroupBox.Size = new System.Drawing.Size(86, 71);
+            this.InsertTableGroupBox.TabIndex = 12;
+            this.InsertTableGroupBox.TabStop = false;
+            this.InsertTableGroupBox.Text = "Insert Table";
+            // 
+            // InsertTableNow
+            // 
+            this.InsertTableNow.Location = new System.Drawing.Point(6, 13);
+            this.InsertTableNow.Name = "InsertTableNow";
+            this.InsertTableNow.Size = new System.Drawing.Size(75, 23);
+            this.InsertTableNow.TabIndex = 12;
+            this.InsertTableNow.Text = "Now";
+            this.InsertTableNow.UseVisualStyleBackColor = true;
+            this.InsertTableNow.Click += new System.EventHandler(this.InsertTableNow_Click);
+            // 
             // SpeechGroupBox
             // 
             this.SpeechGroupBox.Controls.Add(this.InsertSpeechButton);
             this.SpeechGroupBox.Controls.Add(this.ReadOutLoudButton);
-            this.SpeechGroupBox.Location = new System.Drawing.Point(1127, 3);
+            this.SpeechGroupBox.Location = new System.Drawing.Point(1258, 3);
             this.SpeechGroupBox.Name = "SpeechGroupBox";
-            this.SpeechGroupBox.Size = new System.Drawing.Size(168, 71);
+            this.SpeechGroupBox.Size = new System.Drawing.Size(96, 71);
             this.SpeechGroupBox.TabIndex = 11;
             this.SpeechGroupBox.TabStop = false;
             this.SpeechGroupBox.Text = "Speech";
@@ -139,7 +206,7 @@
             // 
             this.InsertSpeechButton.Location = new System.Drawing.Point(6, 42);
             this.InsertSpeechButton.Name = "InsertSpeechButton";
-            this.InsertSpeechButton.Size = new System.Drawing.Size(156, 23);
+            this.InsertSpeechButton.Size = new System.Drawing.Size(84, 23);
             this.InsertSpeechButton.TabIndex = 1;
             this.InsertSpeechButton.Text = "InsertSpeech";
             this.InsertSpeechButton.UseVisualStyleBackColor = true;
@@ -149,43 +216,66 @@
             // 
             this.ReadOutLoudButton.Location = new System.Drawing.Point(6, 13);
             this.ReadOutLoudButton.Name = "ReadOutLoudButton";
-            this.ReadOutLoudButton.Size = new System.Drawing.Size(156, 23);
+            this.ReadOutLoudButton.Size = new System.Drawing.Size(84, 23);
             this.ReadOutLoudButton.TabIndex = 0;
             this.ReadOutLoudButton.Text = "ReadOutLoud";
             this.ReadOutLoudButton.UseVisualStyleBackColor = true;
             this.ReadOutLoudButton.Click += new System.EventHandler(this.ReadOutLoudButton_Click);
             // 
-            // ZoomGroupBox
+            // OtherToolsGroupBox
             // 
-            this.ZoomGroupBox.Controls.Add(this.ZoomFactor);
-            this.ZoomGroupBox.Location = new System.Drawing.Point(1442, 3);
-            this.ZoomGroupBox.Name = "ZoomGroupBox";
-            this.ZoomGroupBox.Size = new System.Drawing.Size(168, 71);
-            this.ZoomGroupBox.TabIndex = 10;
-            this.ZoomGroupBox.TabStop = false;
-            this.ZoomGroupBox.Text = "Zoom";
+            this.OtherToolsGroupBox.Controls.Add(this.ResearchButton);
+            this.OtherToolsGroupBox.Controls.Add(this.WriteEssayButton);
+            this.OtherToolsGroupBox.Controls.Add(this.Update);
+            this.OtherToolsGroupBox.Controls.Add(this.AddToDictionary);
+            this.OtherToolsGroupBox.Controls.Add(this.FindButton);
+            this.OtherToolsGroupBox.Controls.Add(this.SpellCheckButton);
+            this.OtherToolsGroupBox.Location = new System.Drawing.Point(950, 3);
+            this.OtherToolsGroupBox.Name = "OtherToolsGroupBox";
+            this.OtherToolsGroupBox.Size = new System.Drawing.Size(302, 71);
+            this.OtherToolsGroupBox.TabIndex = 9;
+            this.OtherToolsGroupBox.TabStop = false;
+            this.OtherToolsGroupBox.Text = "OtherTools";
             // 
-            // ZoomFactor
+            // ResearchButton
             // 
-            this.ZoomFactor.Location = new System.Drawing.Point(7, 19);
-            this.ZoomFactor.Minimum = 1;
-            this.ZoomFactor.Name = "ZoomFactor";
-            this.ZoomFactor.Size = new System.Drawing.Size(155, 45);
-            this.ZoomFactor.TabIndex = 0;
-            this.ZoomFactor.Value = 1;
-            this.ZoomFactor.Scroll += new System.EventHandler(this.ZoomFactor_Scroll);
+            this.ResearchButton.Location = new System.Drawing.Point(167, 42);
+            this.ResearchButton.Name = "ResearchButton";
+            this.ResearchButton.Size = new System.Drawing.Size(69, 23);
+            this.ResearchButton.TabIndex = 5;
+            this.ResearchButton.Text = "Research";
+            this.ResearchButton.UseVisualStyleBackColor = true;
+            this.ResearchButton.Click += new System.EventHandler(this.ResearchButton_Click);
             // 
-            // OtherToolsTab
+            // WriteEssayButton
             // 
-            this.OtherToolsTab.Controls.Add(this.AddToDictionary);
-            this.OtherToolsTab.Controls.Add(this.FindButton);
-            this.OtherToolsTab.Controls.Add(this.SpellCheckButton);
-            this.OtherToolsTab.Location = new System.Drawing.Point(953, 3);
-            this.OtherToolsTab.Name = "OtherToolsTab";
-            this.OtherToolsTab.Size = new System.Drawing.Size(168, 71);
-            this.OtherToolsTab.TabIndex = 9;
-            this.OtherToolsTab.TabStop = false;
-            this.OtherToolsTab.Text = "OtherTools";
+            this.WriteEssayButton.Location = new System.Drawing.Point(167, 13);
+            this.WriteEssayButton.Name = "WriteEssayButton";
+            this.WriteEssayButton.Size = new System.Drawing.Size(69, 23);
+            this.WriteEssayButton.TabIndex = 4;
+            this.WriteEssayButton.Text = "WriteEssay";
+            this.WriteEssayButton.UseVisualStyleBackColor = true;
+            this.WriteEssayButton.Click += new System.EventHandler(this.WriteEssayButton_Click);
+            // 
+            // Update
+            // 
+            this.Update.Location = new System.Drawing.Point(87, 41);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(75, 23);
+            this.Update.TabIndex = 3;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
+            // 
+            // AddToDictionary
+            // 
+            this.AddToDictionary.Location = new System.Drawing.Point(6, 42);
+            this.AddToDictionary.Name = "AddToDictionary";
+            this.AddToDictionary.Size = new System.Drawing.Size(75, 23);
+            this.AddToDictionary.TabIndex = 2;
+            this.AddToDictionary.Text = "AddWord";
+            this.AddToDictionary.UseVisualStyleBackColor = true;
+            this.AddToDictionary.Click += new System.EventHandler(this.AddToDictionary_Click);
             // 
             // FindButton
             // 
@@ -211,16 +301,16 @@
             // 
             this.ImageTab.Controls.Add(this.InsertImageFromUri);
             this.ImageTab.Controls.Add(this.InsertImageFromFileButton);
-            this.ImageTab.Location = new System.Drawing.Point(779, 3);
+            this.ImageTab.Location = new System.Drawing.Point(764, 3);
             this.ImageTab.Name = "ImageTab";
-            this.ImageTab.Size = new System.Drawing.Size(168, 71);
+            this.ImageTab.Size = new System.Drawing.Size(88, 71);
             this.ImageTab.TabIndex = 8;
             this.ImageTab.TabStop = false;
             this.ImageTab.Text = "Insert Image";
             // 
             // InsertImageFromUri
             // 
-            this.InsertImageFromUri.Location = new System.Drawing.Point(88, 20);
+            this.InsertImageFromUri.Location = new System.Drawing.Point(6, 42);
             this.InsertImageFromUri.Name = "InsertImageFromUri";
             this.InsertImageFromUri.Size = new System.Drawing.Size(75, 23);
             this.InsertImageFromUri.TabIndex = 1;
@@ -230,7 +320,7 @@
             // 
             // InsertImageFromFileButton
             // 
-            this.InsertImageFromFileButton.Location = new System.Drawing.Point(7, 20);
+            this.InsertImageFromFileButton.Location = new System.Drawing.Point(6, 13);
             this.InsertImageFromFileButton.Name = "InsertImageFromFileButton";
             this.InsertImageFromFileButton.Size = new System.Drawing.Size(75, 23);
             this.InsertImageFromFileButton.TabIndex = 0;
@@ -245,16 +335,26 @@
             this.FileGroupBox.Controls.Add(this.PrintButton);
             this.FileGroupBox.Controls.Add(this.OpenButton);
             this.FileGroupBox.Controls.Add(this.SaveButton);
-            this.FileGroupBox.Location = new System.Drawing.Point(523, 3);
+            this.FileGroupBox.Location = new System.Drawing.Point(508, 3);
             this.FileGroupBox.Name = "FileGroupBox";
             this.FileGroupBox.Size = new System.Drawing.Size(250, 71);
             this.FileGroupBox.TabIndex = 7;
             this.FileGroupBox.TabStop = false;
             this.FileGroupBox.Text = "File";
             // 
+            // ToHTMLDocButton
+            // 
+            this.ToHTMLDocButton.Location = new System.Drawing.Point(105, 41);
+            this.ToHTMLDocButton.Name = "ToHTMLDocButton";
+            this.ToHTMLDocButton.Size = new System.Drawing.Size(139, 23);
+            this.ToHTMLDocButton.TabIndex = 4;
+            this.ToHTMLDocButton.Text = "ToHTMLDocument";
+            this.ToHTMLDocButton.UseVisualStyleBackColor = true;
+            this.ToHTMLDocButton.Click += new System.EventHandler(this.ToHTMLDocButton_Click);
+            // 
             // FetchFromURIButton
             // 
-            this.FetchFromURIButton.Location = new System.Drawing.Point(7, 46);
+            this.FetchFromURIButton.Location = new System.Drawing.Point(7, 41);
             this.FetchFromURIButton.Name = "FetchFromURIButton";
             this.FetchFromURIButton.Size = new System.Drawing.Size(92, 23);
             this.FetchFromURIButton.TabIndex = 3;
@@ -264,7 +364,7 @@
             // 
             // PrintButton
             // 
-            this.PrintButton.Location = new System.Drawing.Point(169, 20);
+            this.PrintButton.Location = new System.Drawing.Point(169, 13);
             this.PrintButton.Name = "PrintButton";
             this.PrintButton.Size = new System.Drawing.Size(75, 23);
             this.PrintButton.TabIndex = 2;
@@ -274,7 +374,7 @@
             // 
             // OpenButton
             // 
-            this.OpenButton.Location = new System.Drawing.Point(88, 20);
+            this.OpenButton.Location = new System.Drawing.Point(88, 13);
             this.OpenButton.Name = "OpenButton";
             this.OpenButton.Size = new System.Drawing.Size(75, 23);
             this.OpenButton.TabIndex = 1;
@@ -284,7 +384,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(7, 20);
+            this.SaveButton.Location = new System.Drawing.Point(7, 13);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
             this.SaveButton.TabIndex = 0;
@@ -304,16 +404,16 @@
             this.FontGroupBox.Controls.Add(this.FontFamilySelection);
             this.FontGroupBox.Controls.Add(this.ItalicButton);
             this.FontGroupBox.Controls.Add(this.UnderlineButton);
-            this.FontGroupBox.Location = new System.Drawing.Point(6, 3);
+            this.FontGroupBox.Location = new System.Drawing.Point(3, 3);
             this.FontGroupBox.Name = "FontGroupBox";
-            this.FontGroupBox.Size = new System.Drawing.Size(511, 71);
+            this.FontGroupBox.Size = new System.Drawing.Size(499, 71);
             this.FontGroupBox.TabIndex = 6;
             this.FontGroupBox.TabStop = false;
             this.FontGroupBox.Text = "Font";
             // 
             // ChangeColor
             // 
-            this.ChangeColor.Location = new System.Drawing.Point(348, 17);
+            this.ChangeColor.Location = new System.Drawing.Point(335, 13);
             this.ChangeColor.Name = "ChangeColor";
             this.ChangeColor.Size = new System.Drawing.Size(77, 23);
             this.ChangeColor.TabIndex = 9;
@@ -323,7 +423,7 @@
             // 
             // RightButton
             // 
-            this.RightButton.Location = new System.Drawing.Point(431, 17);
+            this.RightButton.Location = new System.Drawing.Point(418, 13);
             this.RightButton.Name = "RightButton";
             this.RightButton.Size = new System.Drawing.Size(75, 23);
             this.RightButton.TabIndex = 8;
@@ -333,7 +433,7 @@
             // 
             // LeftButton
             // 
-            this.LeftButton.Location = new System.Drawing.Point(431, 46);
+            this.LeftButton.Location = new System.Drawing.Point(418, 41);
             this.LeftButton.Name = "LeftButton";
             this.LeftButton.Size = new System.Drawing.Size(75, 23);
             this.LeftButton.TabIndex = 7;
@@ -343,7 +443,7 @@
             // 
             // CenterButton
             // 
-            this.CenterButton.Location = new System.Drawing.Point(348, 46);
+            this.CenterButton.Location = new System.Drawing.Point(334, 41);
             this.CenterButton.Name = "CenterButton";
             this.CenterButton.Size = new System.Drawing.Size(75, 23);
             this.CenterButton.TabIndex = 6;
@@ -353,7 +453,7 @@
             // 
             // BoldButton
             // 
-            this.BoldButton.Location = new System.Drawing.Point(2, 46);
+            this.BoldButton.Location = new System.Drawing.Point(5, 41);
             this.BoldButton.Name = "BoldButton";
             this.BoldButton.Size = new System.Drawing.Size(75, 23);
             this.BoldButton.TabIndex = 2;
@@ -364,7 +464,7 @@
             // FontSizeSelection
             // 
             this.FontSizeSelection.FormattingEnabled = true;
-            this.FontSizeSelection.Location = new System.Drawing.Point(232, 19);
+            this.FontSizeSelection.Location = new System.Drawing.Point(233, 15);
             this.FontSizeSelection.Name = "FontSizeSelection";
             this.FontSizeSelection.Size = new System.Drawing.Size(96, 21);
             this.FontSizeSelection.TabIndex = 1;
@@ -374,7 +474,7 @@
             // 
             // RegularButton
             // 
-            this.RegularButton.Location = new System.Drawing.Point(245, 46);
+            this.RegularButton.Location = new System.Drawing.Point(245, 41);
             this.RegularButton.Name = "RegularButton";
             this.RegularButton.Size = new System.Drawing.Size(75, 23);
             this.RegularButton.TabIndex = 5;
@@ -388,7 +488,7 @@
             this.FontFamilySelection.DropDownWidth = 274;
             this.FontFamilySelection.FormattingEnabled = true;
             this.FontFamilySelection.IntegralHeight = false;
-            this.FontFamilySelection.Location = new System.Drawing.Point(2, 19);
+            this.FontFamilySelection.Location = new System.Drawing.Point(5, 15);
             this.FontFamilySelection.Name = "FontFamilySelection";
             this.FontFamilySelection.Size = new System.Drawing.Size(224, 21);
             this.FontFamilySelection.TabIndex = 0;
@@ -396,7 +496,7 @@
             // 
             // ItalicButton
             // 
-            this.ItalicButton.Location = new System.Drawing.Point(164, 46);
+            this.ItalicButton.Location = new System.Drawing.Point(164, 41);
             this.ItalicButton.Name = "ItalicButton";
             this.ItalicButton.Size = new System.Drawing.Size(75, 23);
             this.ItalicButton.TabIndex = 4;
@@ -406,7 +506,7 @@
             // 
             // UnderlineButton
             // 
-            this.UnderlineButton.Location = new System.Drawing.Point(83, 46);
+            this.UnderlineButton.Location = new System.Drawing.Point(83, 41);
             this.UnderlineButton.Name = "UnderlineButton";
             this.UnderlineButton.Size = new System.Drawing.Size(75, 23);
             this.UnderlineButton.TabIndex = 3;
@@ -414,10 +514,32 @@
             this.UnderlineButton.UseVisualStyleBackColor = true;
             this.UnderlineButton.Click += new System.EventHandler(this.UnderlineButton_Click);
             // 
+            // ZoomGroupBox
+            // 
+            this.ZoomGroupBox.Controls.Add(this.ZoomFactor);
+            this.ZoomGroupBox.Location = new System.Drawing.Point(12, 131);
+            this.ZoomGroupBox.Name = "ZoomGroupBox";
+            this.ZoomGroupBox.Size = new System.Drawing.Size(168, 71);
+            this.ZoomGroupBox.TabIndex = 10;
+            this.ZoomGroupBox.TabStop = false;
+            this.ZoomGroupBox.Text = "Zoom";
+            // 
+            // ZoomFactor
+            // 
+            this.ZoomFactor.Location = new System.Drawing.Point(7, 19);
+            this.ZoomFactor.Minimum = 1;
+            this.ZoomFactor.Name = "ZoomFactor";
+            this.ZoomFactor.Size = new System.Drawing.Size(155, 45);
+            this.ZoomFactor.TabIndex = 0;
+            this.ZoomFactor.Value = 1;
+            this.ZoomFactor.Scroll += new System.EventHandler(this.ZoomFactor_Scroll);
+            // 
             // AllTabs
             // 
             this.AllTabs.Controls.Add(this.HomeTab);
-            this.AllTabs.Controls.Add(this.TextProcessingTab);
+            this.AllTabs.Controls.Add(this.BibliographyAndHeaderTab);
+            this.AllTabs.Controls.Add(this.SharingAndMailingTab);
+            this.AllTabs.Controls.Add(this.PlagiarismTab);
             this.AllTabs.ItemSize = new System.Drawing.Size(50, 25);
             this.AllTabs.Location = new System.Drawing.Point(0, 1);
             this.AllTabs.Name = "AllTabs";
@@ -427,17 +549,17 @@
             this.AllTabs.Tag = "";
             this.AllTabs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
-            // TextProcessingTab
+            // BibliographyAndHeaderTab
             // 
-            this.TextProcessingTab.Controls.Add(this.HeaderGroupBox);
-            this.TextProcessingTab.Controls.Add(this.BibliographyGroupBox);
-            this.TextProcessingTab.Location = new System.Drawing.Point(4, 29);
-            this.TextProcessingTab.Name = "TextProcessingTab";
-            this.TextProcessingTab.Padding = new System.Windows.Forms.Padding(3);
-            this.TextProcessingTab.Size = new System.Drawing.Size(1653, 80);
-            this.TextProcessingTab.TabIndex = 2;
-            this.TextProcessingTab.Text = "TextProcessing";
-            this.TextProcessingTab.UseVisualStyleBackColor = true;
+            this.BibliographyAndHeaderTab.Controls.Add(this.HeaderGroupBox);
+            this.BibliographyAndHeaderTab.Controls.Add(this.BibliographyGroupBox);
+            this.BibliographyAndHeaderTab.Location = new System.Drawing.Point(4, 29);
+            this.BibliographyAndHeaderTab.Name = "BibliographyAndHeaderTab";
+            this.BibliographyAndHeaderTab.Padding = new System.Windows.Forms.Padding(3);
+            this.BibliographyAndHeaderTab.Size = new System.Drawing.Size(1653, 80);
+            this.BibliographyAndHeaderTab.TabIndex = 2;
+            this.BibliographyAndHeaderTab.Text = "Bibliography And Header";
+            this.BibliographyAndHeaderTab.UseVisualStyleBackColor = true;
             // 
             // HeaderGroupBox
             // 
@@ -623,55 +745,373 @@
             this.SourceViewer.Size = new System.Drawing.Size(339, 21);
             this.SourceViewer.TabIndex = 0;
             // 
+            // SharingAndMailingTab
+            // 
+            this.SharingAndMailingTab.Controls.Add(this.MailFormating);
+            this.SharingAndMailingTab.Controls.Add(this.FileSharingGroupBox);
+            this.SharingAndMailingTab.Controls.Add(this.MailingGroupBox);
+            this.SharingAndMailingTab.Location = new System.Drawing.Point(4, 29);
+            this.SharingAndMailingTab.Name = "SharingAndMailingTab";
+            this.SharingAndMailingTab.Size = new System.Drawing.Size(1653, 80);
+            this.SharingAndMailingTab.TabIndex = 4;
+            this.SharingAndMailingTab.Text = "Share and Mail";
+            this.SharingAndMailingTab.UseVisualStyleBackColor = true;
+            // 
+            // MailFormating
+            // 
+            this.MailFormating.Controls.Add(this.FormatAsLetterButton);
+            this.MailFormating.Controls.Add(this.SetRecieverAdressButton);
+            this.MailFormating.Controls.Add(this.SetYourAdressButton);
+            this.MailFormating.Controls.Add(this.MailFormatToInput);
+            this.MailFormating.Controls.Add(this.label6);
+            this.MailFormating.Controls.Add(this.label5);
+            this.MailFormating.Controls.Add(this.MailFormatFromInput);
+            this.MailFormating.Location = new System.Drawing.Point(663, 4);
+            this.MailFormating.Name = "MailFormating";
+            this.MailFormating.Size = new System.Drawing.Size(566, 64);
+            this.MailFormating.TabIndex = 2;
+            this.MailFormating.TabStop = false;
+            this.MailFormating.Text = "Formating";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "From:";
+            // 
+            // MailFormatFromInput
+            // 
+            this.MailFormatFromInput.Location = new System.Drawing.Point(45, 13);
+            this.MailFormatFromInput.Name = "MailFormatFromInput";
+            this.MailFormatFromInput.Size = new System.Drawing.Size(290, 20);
+            this.MailFormatFromInput.TabIndex = 0;
+            // 
+            // FileSharingGroupBox
+            // 
+            this.FileSharingGroupBox.Controls.Add(this.MergeWithEmailButton);
+            this.FileSharingGroupBox.Controls.Add(this.MergeWithTxtFileButton);
+            this.FileSharingGroupBox.Controls.Add(this.ExportToPublicDocumentsFolderButton);
+            this.FileSharingGroupBox.Location = new System.Drawing.Point(176, 4);
+            this.FileSharingGroupBox.Name = "FileSharingGroupBox";
+            this.FileSharingGroupBox.Size = new System.Drawing.Size(480, 64);
+            this.FileSharingGroupBox.TabIndex = 1;
+            this.FileSharingGroupBox.TabStop = false;
+            this.FileSharingGroupBox.Text = "FileSharing";
+            // 
+            // MergeWithEmailButton
+            // 
+            this.MergeWithEmailButton.Location = new System.Drawing.Point(337, 19);
+            this.MergeWithEmailButton.Name = "MergeWithEmailButton";
+            this.MergeWithEmailButton.Size = new System.Drawing.Size(135, 23);
+            this.MergeWithEmailButton.TabIndex = 2;
+            this.MergeWithEmailButton.Text = "Merge With Email";
+            this.MergeWithEmailButton.UseVisualStyleBackColor = true;
+            this.MergeWithEmailButton.Click += new System.EventHandler(this.MergeWithEmailButton_Click);
+            // 
+            // MergeWithTxtFileButton
+            // 
+            this.MergeWithTxtFileButton.Location = new System.Drawing.Point(196, 19);
+            this.MergeWithTxtFileButton.Name = "MergeWithTxtFileButton";
+            this.MergeWithTxtFileButton.Size = new System.Drawing.Size(135, 23);
+            this.MergeWithTxtFileButton.TabIndex = 1;
+            this.MergeWithTxtFileButton.Text = "Merge With Text File";
+            this.MergeWithTxtFileButton.UseVisualStyleBackColor = true;
+            this.MergeWithTxtFileButton.Click += new System.EventHandler(this.MergeWithTxtFileButton_Click);
+            // 
+            // ExportToPublicDocumentsFolderButton
+            // 
+            this.ExportToPublicDocumentsFolderButton.Location = new System.Drawing.Point(6, 19);
+            this.ExportToPublicDocumentsFolderButton.Name = "ExportToPublicDocumentsFolderButton";
+            this.ExportToPublicDocumentsFolderButton.Size = new System.Drawing.Size(184, 23);
+            this.ExportToPublicDocumentsFolderButton.TabIndex = 0;
+            this.ExportToPublicDocumentsFolderButton.Text = "Export To Public Documents Folder";
+            this.ExportToPublicDocumentsFolderButton.UseVisualStyleBackColor = true;
+            this.ExportToPublicDocumentsFolderButton.Click += new System.EventHandler(this.ExportToPublicDocumentsFolderButton_Click);
+            // 
+            // MailingGroupBox
+            // 
+            this.MailingGroupBox.Controls.Add(this.RecieveMail);
+            this.MailingGroupBox.Controls.Add(this.MailToButton);
+            this.MailingGroupBox.Location = new System.Drawing.Point(4, 4);
+            this.MailingGroupBox.Name = "MailingGroupBox";
+            this.MailingGroupBox.Size = new System.Drawing.Size(166, 64);
+            this.MailingGroupBox.TabIndex = 0;
+            this.MailingGroupBox.TabStop = false;
+            this.MailingGroupBox.Text = "E-Mail";
+            // 
+            // RecieveMail
+            // 
+            this.RecieveMail.Location = new System.Drawing.Point(85, 19);
+            this.RecieveMail.Name = "RecieveMail";
+            this.RecieveMail.Size = new System.Drawing.Size(75, 23);
+            this.RecieveMail.TabIndex = 1;
+            this.RecieveMail.Text = "Recieve";
+            this.RecieveMail.UseVisualStyleBackColor = true;
+            this.RecieveMail.Click += new System.EventHandler(this.RecieveMail_Click);
+            // 
+            // MailToButton
+            // 
+            this.MailToButton.Location = new System.Drawing.Point(4, 19);
+            this.MailToButton.Name = "MailToButton";
+            this.MailToButton.Size = new System.Drawing.Size(75, 23);
+            this.MailToButton.TabIndex = 0;
+            this.MailToButton.Text = "MailTo";
+            this.MailToButton.UseVisualStyleBackColor = true;
+            this.MailToButton.Click += new System.EventHandler(this.MailToButton_Click);
+            // 
+            // PlagiarismTab
+            // 
+            this.PlagiarismTab.Controls.Add(this.CopyrightNoticeGroupBox);
+            this.PlagiarismTab.Controls.Add(this.RephrasingToolsGroupBox);
+            this.PlagiarismTab.Location = new System.Drawing.Point(4, 29);
+            this.PlagiarismTab.Name = "PlagiarismTab";
+            this.PlagiarismTab.Size = new System.Drawing.Size(1653, 80);
+            this.PlagiarismTab.TabIndex = 5;
+            this.PlagiarismTab.Text = "Plagiarism";
+            this.PlagiarismTab.UseVisualStyleBackColor = true;
+            // 
+            // CopyrightNoticeGroupBox
+            // 
+            this.CopyrightNoticeGroupBox.Controls.Add(this.InsertCopyrightNoticeButton);
+            this.CopyrightNoticeGroupBox.Controls.Add(this.CopyrightYearInput);
+            this.CopyrightNoticeGroupBox.Controls.Add(this.label4);
+            this.CopyrightNoticeGroupBox.Controls.Add(this.label3);
+            this.CopyrightNoticeGroupBox.Controls.Add(this.CopyrightNoticeNameInput);
+            this.CopyrightNoticeGroupBox.Location = new System.Drawing.Point(139, 4);
+            this.CopyrightNoticeGroupBox.Name = "CopyrightNoticeGroupBox";
+            this.CopyrightNoticeGroupBox.Size = new System.Drawing.Size(402, 73);
+            this.CopyrightNoticeGroupBox.TabIndex = 1;
+            this.CopyrightNoticeGroupBox.TabStop = false;
+            this.CopyrightNoticeGroupBox.Text = "CopyrightNotice";
+            // 
+            // InsertCopyrightNoticeButton
+            // 
+            this.InsertCopyrightNoticeButton.Location = new System.Drawing.Point(321, 45);
+            this.InsertCopyrightNoticeButton.Name = "InsertCopyrightNoticeButton";
+            this.InsertCopyrightNoticeButton.Size = new System.Drawing.Size(75, 23);
+            this.InsertCopyrightNoticeButton.TabIndex = 4;
+            this.InsertCopyrightNoticeButton.Text = "Insert Notice";
+            this.InsertCopyrightNoticeButton.UseVisualStyleBackColor = true;
+            this.InsertCopyrightNoticeButton.Click += new System.EventHandler(this.InsertCopyrightNoticeButton_Click);
+            // 
+            // CopyrightYearInput
+            // 
+            this.CopyrightYearInput.Location = new System.Drawing.Point(51, 47);
+            this.CopyrightYearInput.Name = "CopyrightYearInput";
+            this.CopyrightYearInput.Size = new System.Drawing.Size(166, 20);
+            this.CopyrightYearInput.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Year:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Name:";
+            // 
+            // CopyrightNoticeNameInput
+            // 
+            this.CopyrightNoticeNameInput.Location = new System.Drawing.Point(51, 21);
+            this.CopyrightNoticeNameInput.Name = "CopyrightNoticeNameInput";
+            this.CopyrightNoticeNameInput.Size = new System.Drawing.Size(345, 20);
+            this.CopyrightNoticeNameInput.TabIndex = 0;
+            // 
+            // RephrasingToolsGroupBox
+            // 
+            this.RephrasingToolsGroupBox.Controls.Add(this.RephraseTextButton);
+            this.RephrasingToolsGroupBox.Location = new System.Drawing.Point(8, 4);
+            this.RephrasingToolsGroupBox.Name = "RephrasingToolsGroupBox";
+            this.RephrasingToolsGroupBox.Size = new System.Drawing.Size(124, 73);
+            this.RephrasingToolsGroupBox.TabIndex = 0;
+            this.RephrasingToolsGroupBox.TabStop = false;
+            this.RephrasingToolsGroupBox.Text = "Rephrase Text";
+            // 
+            // RephraseTextButton
+            // 
+            this.RephraseTextButton.Location = new System.Drawing.Point(6, 19);
+            this.RephraseTextButton.Name = "RephraseTextButton";
+            this.RephraseTextButton.Size = new System.Drawing.Size(112, 23);
+            this.RephraseTextButton.TabIndex = 0;
+            this.RephraseTextButton.Text = "RephraseText";
+            this.RephraseTextButton.UseVisualStyleBackColor = true;
+            this.RephraseTextButton.Click += new System.EventHandler(this.RephraseTextButton_Click);
+            // 
             // printDialog
             // 
             this.printDialog.UseEXDialog = true;
             // 
-            // AddToDictionary
+            // CommandPaleteGroupBox
             // 
-            this.AddToDictionary.Location = new System.Drawing.Point(6, 42);
-            this.AddToDictionary.Name = "AddToDictionary";
-            this.AddToDictionary.Size = new System.Drawing.Size(75, 23);
-            this.AddToDictionary.TabIndex = 2;
-            this.AddToDictionary.Text = "AddWord";
-            this.AddToDictionary.UseVisualStyleBackColor = true;
-            this.AddToDictionary.Click += new System.EventHandler(this.AddToDictionary_Click);
+            this.CommandPaleteGroupBox.Controls.Add(this.EditorRedoButton);
+            this.CommandPaleteGroupBox.Controls.Add(this.EditorUndoButton);
+            this.CommandPaleteGroupBox.Controls.Add(this.CommandPaleteSaveButton);
+            this.CommandPaleteGroupBox.Controls.Add(this.EditorFindButton);
+            this.CommandPaleteGroupBox.Controls.Add(this.EditorCopyButton);
+            this.CommandPaleteGroupBox.Controls.Add(this.EditorPasteButton);
+            this.CommandPaleteGroupBox.Location = new System.Drawing.Point(12, 131);
+            this.CommandPaleteGroupBox.Name = "CommandPaleteGroupBox";
+            this.CommandPaleteGroupBox.Size = new System.Drawing.Size(175, 108);
+            this.CommandPaleteGroupBox.TabIndex = 11;
+            this.CommandPaleteGroupBox.TabStop = false;
+            this.CommandPaleteGroupBox.Text = "CommandPalete";
             // 
-            // ToHTMLDocButton
+            // EditorRedoButton
             // 
-            this.ToHTMLDocButton.Location = new System.Drawing.Point(105, 46);
-            this.ToHTMLDocButton.Name = "ToHTMLDocButton";
-            this.ToHTMLDocButton.Size = new System.Drawing.Size(139, 23);
-            this.ToHTMLDocButton.TabIndex = 4;
-            this.ToHTMLDocButton.Text = "ToHTMLDocument";
-            this.ToHTMLDocButton.UseVisualStyleBackColor = true;
-            this.ToHTMLDocButton.Click += new System.EventHandler(this.ToHTMLDocButton_Click);
+            this.EditorRedoButton.Location = new System.Drawing.Point(94, 78);
+            this.EditorRedoButton.Name = "EditorRedoButton";
+            this.EditorRedoButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorRedoButton.TabIndex = 5;
+            this.EditorRedoButton.Text = "Redo";
+            this.EditorRedoButton.UseVisualStyleBackColor = true;
+            this.EditorRedoButton.Click += new System.EventHandler(this.EditorRedoButton_Click);
+            // 
+            // EditorUndoButton
+            // 
+            this.EditorUndoButton.Location = new System.Drawing.Point(7, 77);
+            this.EditorUndoButton.Name = "EditorUndoButton";
+            this.EditorUndoButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorUndoButton.TabIndex = 4;
+            this.EditorUndoButton.Text = "Undo";
+            this.EditorUndoButton.UseVisualStyleBackColor = true;
+            // 
+            // CommandPaleteSaveButton
+            // 
+            this.CommandPaleteSaveButton.Location = new System.Drawing.Point(94, 49);
+            this.CommandPaleteSaveButton.Name = "CommandPaleteSaveButton";
+            this.CommandPaleteSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.CommandPaleteSaveButton.TabIndex = 3;
+            this.CommandPaleteSaveButton.Text = "Save";
+            this.CommandPaleteSaveButton.UseVisualStyleBackColor = true;
+            this.CommandPaleteSaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // EditorFindButton
+            // 
+            this.EditorFindButton.Location = new System.Drawing.Point(7, 49);
+            this.EditorFindButton.Name = "EditorFindButton";
+            this.EditorFindButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorFindButton.TabIndex = 2;
+            this.EditorFindButton.Text = "Find";
+            this.EditorFindButton.UseVisualStyleBackColor = true;
+            this.EditorFindButton.Click += new System.EventHandler(this.FindButton_Click);
+            // 
+            // EditorCopyButton
+            // 
+            this.EditorCopyButton.Location = new System.Drawing.Point(93, 20);
+            this.EditorCopyButton.Name = "EditorCopyButton";
+            this.EditorCopyButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorCopyButton.TabIndex = 1;
+            this.EditorCopyButton.Text = "Copy";
+            this.EditorCopyButton.UseVisualStyleBackColor = true;
+            this.EditorCopyButton.Click += new System.EventHandler(this.EditorCopyButton_Click);
+            // 
+            // EditorPasteButton
+            // 
+            this.EditorPasteButton.Location = new System.Drawing.Point(7, 20);
+            this.EditorPasteButton.Name = "EditorPasteButton";
+            this.EditorPasteButton.Size = new System.Drawing.Size(75, 23);
+            this.EditorPasteButton.TabIndex = 0;
+            this.EditorPasteButton.Text = "Paste";
+            this.EditorPasteButton.UseVisualStyleBackColor = true;
+            this.EditorPasteButton.Click += new System.EventHandler(this.EditorPasteButton_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 38);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "To:";
+            // 
+            // MailFormatToInput
+            // 
+            this.MailFormatToInput.Location = new System.Drawing.Point(45, 39);
+            this.MailFormatToInput.Name = "MailFormatToInput";
+            this.MailFormatToInput.Size = new System.Drawing.Size(290, 20);
+            this.MailFormatToInput.TabIndex = 3;
+            // 
+            // SetYourAdressButton
+            // 
+            this.SetYourAdressButton.Location = new System.Drawing.Point(341, 10);
+            this.SetYourAdressButton.Name = "SetYourAdressButton";
+            this.SetYourAdressButton.Size = new System.Drawing.Size(107, 23);
+            this.SetYourAdressButton.TabIndex = 4;
+            this.SetYourAdressButton.Text = "SetYourAdress";
+            this.SetYourAdressButton.UseVisualStyleBackColor = true;
+            this.SetYourAdressButton.Click += new System.EventHandler(this.SetYourAdressButton_Click);
+            // 
+            // SetRecieverAdressButton
+            // 
+            this.SetRecieverAdressButton.Location = new System.Drawing.Point(341, 36);
+            this.SetRecieverAdressButton.Name = "SetRecieverAdressButton";
+            this.SetRecieverAdressButton.Size = new System.Drawing.Size(107, 23);
+            this.SetRecieverAdressButton.TabIndex = 5;
+            this.SetRecieverAdressButton.Text = "SetRecieverAdress";
+            this.SetRecieverAdressButton.UseVisualStyleBackColor = true;
+            this.SetRecieverAdressButton.Click += new System.EventHandler(this.SetRecieverAdressButton_Click);
+            // 
+            // FormatAsLetterButton
+            // 
+            this.FormatAsLetterButton.Location = new System.Drawing.Point(485, 37);
+            this.FormatAsLetterButton.Name = "FormatAsLetterButton";
+            this.FormatAsLetterButton.Size = new System.Drawing.Size(75, 23);
+            this.FormatAsLetterButton.TabIndex = 6;
+            this.FormatAsLetterButton.Text = "Format";
+            this.FormatAsLetterButton.UseVisualStyleBackColor = true;
+            this.FormatAsLetterButton.Click += new System.EventHandler(this.FormatAsLetterButton_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 736);
+            this.Controls.Add(this.CommandPaleteGroupBox);
             this.Controls.Add(this.AllTabs);
+            this.Controls.Add(this.ZoomGroupBox);
             this.Controls.Add(this.Editor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "TextStudio";
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.HomeTab.ResumeLayout(false);
+            this.InsertTableGroupBox.ResumeLayout(false);
             this.SpeechGroupBox.ResumeLayout(false);
-            this.ZoomGroupBox.ResumeLayout(false);
-            this.ZoomGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ZoomFactor)).EndInit();
-            this.OtherToolsTab.ResumeLayout(false);
+            this.OtherToolsGroupBox.ResumeLayout(false);
             this.ImageTab.ResumeLayout(false);
             this.FileGroupBox.ResumeLayout(false);
             this.FontGroupBox.ResumeLayout(false);
+            this.ZoomGroupBox.ResumeLayout(false);
+            this.ZoomGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ZoomFactor)).EndInit();
             this.AllTabs.ResumeLayout(false);
-            this.TextProcessingTab.ResumeLayout(false);
+            this.BibliographyAndHeaderTab.ResumeLayout(false);
             this.HeaderGroupBox.ResumeLayout(false);
             this.HeaderGroupBox.PerformLayout();
             this.BibliographyGroupBox.ResumeLayout(false);
             this.BibliographyGroupBox.PerformLayout();
+            this.SharingAndMailingTab.ResumeLayout(false);
+            this.MailFormating.ResumeLayout(false);
+            this.MailFormating.PerformLayout();
+            this.FileSharingGroupBox.ResumeLayout(false);
+            this.MailingGroupBox.ResumeLayout(false);
+            this.PlagiarismTab.ResumeLayout(false);
+            this.CopyrightNoticeGroupBox.ResumeLayout(false);
+            this.CopyrightNoticeGroupBox.PerformLayout();
+            this.RephrasingToolsGroupBox.ResumeLayout(false);
+            this.CommandPaleteGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -695,7 +1135,7 @@
         private System.Windows.Forms.Button OpenButton;
         private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.PrintDialog printDialog;
-        private System.Windows.Forms.TabPage TextProcessingTab;
+        private System.Windows.Forms.TabPage BibliographyAndHeaderTab;
         private System.Windows.Forms.GroupBox BibliographyGroupBox;
         private System.Windows.Forms.Button AddSourceButton;
         private System.Windows.Forms.Button CiteAllButton;
@@ -722,7 +1162,7 @@
         private System.Windows.Forms.Button ChangeColor;
         private System.Windows.Forms.ColorDialog colorDialog;
         private System.Windows.Forms.Button FetchFromURIButton;
-        private System.Windows.Forms.GroupBox OtherToolsTab;
+        private System.Windows.Forms.GroupBox OtherToolsGroupBox;
         private System.Windows.Forms.Button SpellCheckButton;
         private System.Windows.Forms.Button FindButton;
         private System.Windows.Forms.Label label2;
@@ -734,6 +1174,43 @@
         private System.Windows.Forms.Button ReadOutLoudButton;
         private System.Windows.Forms.Button AddToDictionary;
         private System.Windows.Forms.Button ToHTMLDocButton;
+        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.GroupBox CommandPaleteGroupBox;
+        private System.Windows.Forms.Button EditorFindButton;
+        private System.Windows.Forms.Button EditorCopyButton;
+        private System.Windows.Forms.Button EditorPasteButton;
+        private System.Windows.Forms.Button CommandPaleteSaveButton;
+        private System.Windows.Forms.Button EditorRedoButton;
+        private System.Windows.Forms.Button EditorUndoButton;
+        private System.Windows.Forms.Button WriteEssayButton;
+        private System.Windows.Forms.Button ResearchButton;
+        private System.Windows.Forms.TabPage SharingAndMailingTab;
+        private System.Windows.Forms.GroupBox MailingGroupBox;
+        private System.Windows.Forms.Button MailToButton;
+        private System.Windows.Forms.GroupBox FileSharingGroupBox;
+        private System.Windows.Forms.Button ExportToPublicDocumentsFolderButton;
+        private System.Windows.Forms.Button MergeWithTxtFileButton;
+        private System.Windows.Forms.Button RecieveMail;
+        private System.Windows.Forms.Button MergeWithEmailButton;
+        private System.Windows.Forms.TabPage PlagiarismTab;
+        private System.Windows.Forms.GroupBox RephrasingToolsGroupBox;
+        private System.Windows.Forms.Button RephraseTextButton;
+        private System.Windows.Forms.GroupBox InsertTableGroupBox;
+        private System.Windows.Forms.Button InsertTableNow;
+        private System.Windows.Forms.GroupBox CopyrightNoticeGroupBox;
+        private System.Windows.Forms.Button InsertCopyrightNoticeButton;
+        private System.Windows.Forms.TextBox CopyrightYearInput;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox CopyrightNoticeNameInput;
+        private System.Windows.Forms.GroupBox MailFormating;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox MailFormatFromInput;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox MailFormatToInput;
+        private System.Windows.Forms.Button SetRecieverAdressButton;
+        private System.Windows.Forms.Button SetYourAdressButton;
+        private System.Windows.Forms.Button FormatAsLetterButton;
     }
 }
 

@@ -16,7 +16,7 @@ namespace TextStudio
         public string ToHtmlDocument(string name,RichTextBox Editor)
         {
             char c = '"';
-            string toret = "<html><head><title>"+name+"</title></head><body style = "+c+"font-family: '"+Editor.Font.FontFamily.Name+"' font-size: "+Editor.Font.Size+"px"+c+">"+Editor.Text+"</body></html>";
+            string toret = "<html><head><title>"+name+"</title></head><body style = "+c+"font-family: '"+Editor.Font.FontFamily.Name+"'; font-size: "+Editor.Font.Size+"px; font-style: "+Editor.Font.Style.ToString()+"; font-color: "+Editor.ForeColor.ToString()+";"+c+">"+Editor.Text+"</body></html>";
             return toret;
         }
     }

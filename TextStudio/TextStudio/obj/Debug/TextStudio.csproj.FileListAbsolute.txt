@@ -12,7 +12,6 @@ C:\Users\MichaelWang\source\repos\TextStudio\TextStudio\obj\Debug\TextStudio.Fro
 C:\Users\MichaelWang\source\repos\TextStudio\TextStudio\obj\Debug\TextStudio.FindText.resources
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\TextStudio.exe
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\TextStudio.pdb
-C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csprojAssemblyReference.cache
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.FindText.resources
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.FromUrl.resources
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.SourceDesigner.resources
@@ -22,3 +21,31 @@ C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudi
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csproj.CoreCompileInputs.cache
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.exe
 C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.pdb
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\TextStudio.exe
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\TextStudio.pdb
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.FindText.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.FromUrl.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.SourceDesigner.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.Main.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.Properties.Resources.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csproj.GenerateResource.cache
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csproj.CoreCompileInputs.cache
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.exe
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.pdb
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.EssayWriter.resources
+C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.EssayWriter.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.ResearchHelper.resources
+C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.ResearchHelper.resources
+C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.MailToWizard.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.MailToWizard.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.MergeLinePrompt.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\OpenPop.dll
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.RecieveEmail.resources
+C:\Users\MichaelWang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csproj.CopyComplete
+C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\bin\Debug\OpenPop.dll
+C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.InsertTable.resources
+C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.MergeLinePrompt.resources
+C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.RecieveEmail.resources
+C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csproj.CopyComplete
+C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.csprojAssemblyReference.cache
+C:\Users\Michael Wang\Documents\Visual Studio 2017\Projects\TextStudio\TextStudio\obj\Debug\TextStudio.InsertAdress.resources

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -21,6 +22,12 @@ namespace TextStudio
         SpellChecker spellChecker;
         FindText finder;
         SpeechWizard speechWizard;
+        EssayWriter essayWriter;
+        ResearchHelper researchHelper;
+        Merger merger;
+        Rephraser rephraser;
+        string youraddress = null;
+        string recieveraddress = null;
 
         public Main()
         {
@@ -29,8 +36,11 @@ namespace TextStudio
             BibliographyWizard = new BibliographyWizard();
             HeaderWizard = new HeaderWizard();
             spellChecker = new SpellChecker();
+            researchHelper = new ResearchHelper();
             finder = new FindText(ref Editor);
             speechWizard = new SpeechWizard();
+            merger = new Merger();
+            rephraser = new Rephraser();
             this.WindowState = FormWindowState.Maximized;
             this.Text = "TextStudio -" + filepath;
             currentsyle = FontStyle.Regular;
@@ -38,6 +48,18 @@ namespace TextStudio
             LoadBibliographyOptions();
             LoadHeaderFormatOptions();
             spellChecker.Load();
+            ZoomGroupBox.Hide();
+            HideCommandPalete();
+        }
+
+        public void HideCommandPalete()
+        {
+            CommandPaleteGroupBox.Hide();
+        }
+
+        public void ShowCommandPalete()
+        {
+            CommandPaleteGroupBox.Show();
         }
 
         public void LoadFonts()
@@ -86,7 +108,7 @@ namespace TextStudio
         private void Main_Resize(object sender, EventArgs e)
         {
             Editor.Width = this.Width-20;
-            Editor.Height = this.Height - 120;
+            Editor.Height = this.Height - 140;
             AllTabs.Width = this.Width;
         }
 
@@ -159,6 +181,7 @@ namespace TextStudio
                 Editor.SaveFile(filepath);
             }
             this.Text = "TextStudio -"+filepath;
+            HideCommandPalete();
         }
 
         private void OpenButton_Click(object sender, EventArgs e)
@@ -167,15 +190,16 @@ namespace TextStudio
             {
                 try
                 {
-                    Editor.LoadFile(filepath);
                     filepath = openFileDialog.FileName;
+                    Editor.Rtf = File.ReadAllText(filepath);
                 }
-                catch
+                catch(Exception ex)
                 {
                     MessageBox.Show("Invalid Document Format. Must be of RICH TEXT FORMAT. The file may have been corrupted, or you selected a invalid file.", "Text Editor", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             this.Text = "TextStudio -" + filepath;
+            HideCommandPalete();
         }
 
         private void PrintButton_Click(object sender, EventArgs e)
@@ -363,6 +387,7 @@ namespace TextStudio
         {
             finder = new FindText(ref Editor);
             finder.Show();
+            CommandPaleteGroupBox.Hide();
         }
 
         private void ZoomFactor_Scroll(object sender, EventArgs e)
@@ -396,6 +421,21 @@ namespace TextStudio
                 {
                     OpenButton_Click(null, null);
                 }
+                if(e.KeyCode == Keys.M)
+                {
+                    MailToButton_Click(null, null);
+                }
+                if(e.KeyCode == Keys.OemQuestion||e.KeyCode == Keys.P)
+                {
+                    if (CommandPaleteGroupBox.Visible == true)
+                    {
+                        HideCommandPalete();
+                    }
+                    else
+                    {
+                        ShowCommandPalete();
+                    }
+                }
             }
             else if(e.Alt)
             {
@@ -407,18 +447,33 @@ namespace TextStudio
                 {
                     AllTabs.SelectedIndex = 1;
                 }
+                if(e.KeyCode == Keys.M)
+                {
+                    AllTabs.SelectedIndex = 2;
+                }
+                if (e.KeyCode == Keys.Z)
+                {
+                    if (!ZoomGroupBox.Visible)
+                    {
+                        ZoomGroupBox.Show();
+                    }
+                    else
+                    {
+                        ZoomGroupBox.Hide();
+                    }
+                }
             }
         }
 
         private void AddToDictionary_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(Editor.SelectedText) && !Editor.Text.Contains(" "))
+            if (!string.IsNullOrEmpty(Editor.SelectedText))
             {
-                spellChecker.words.Add(Editor.SelectedText);
+                spellChecker.words.Add(Editor.SelectedText.ToLower());
             }
             else
             {
-                MessageBox.Show("Select a word. Words cannot include spaces.","TextEditor SpellChecker",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Select a word.","TextEditor SpellChecker",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -429,6 +484,155 @@ namespace TextStudio
             {
                 File.WriteAllText(saveFileDialog.FileName, converter.ToHtmlDocument(filepath,Editor));
             }
+        }
+
+        private void Update_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo proc = new ProcessStartInfo();
+            proc.UseShellExecute = true;
+            proc.WorkingDirectory = Environment.CurrentDirectory;
+            proc.FileName = Environment.CurrentDirectory + "\\Updater.exe";
+            proc.Verb = "runas";
+            Process.Start(proc);
+        }
+
+        private void EditorPasteButton_Click(object sender, EventArgs e)
+        {
+            Editor.Paste();
+            HideCommandPalete();
+        }
+
+        private void EditorCopyButton_Click(object sender, EventArgs e)
+        {
+            Editor.Copy();
+            HideCommandPalete();
+        }
+
+        private void EditorRedoButton_Click(object sender, EventArgs e)
+        {
+            Editor.Redo();
+            HideCommandPalete();
+        }
+
+        private void EditorUndoButton_Click(object sender, EventArgs e)
+        {
+            Editor.Undo();
+            HideCommandPalete();
+        }
+
+        private void WriteEssayButton_Click(object sender, EventArgs e)
+        {
+            essayWriter = new EssayWriter();
+            essayWriter.ShowDialog();
+            if(!string.IsNullOrEmpty(essayWriter.rtf))
+            {
+                this.Editor.Rtf = essayWriter.rtf;
+            }
+        }
+
+        private void ResearchButton_Click(object sender, EventArgs e)
+        {
+            researchHelper = new ResearchHelper();
+            researchHelper.Show();
+        }
+
+        private void MailToButton_Click(object sender, EventArgs e)
+        {
+            MailToWizard mailToWizard = new MailToWizard(filepath, Editor);
+            mailToWizard.ShowDialog();
+        }
+
+        private void ExportToPublicDocumentsFolderButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FileInfo file = new FileInfo(filepath);
+                Editor.SaveFile(Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments) + "\\"+file.Name+".rtf");
+            }
+            catch
+            {
+                MessageBox.Show("Save your file first", "TextStudio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void MergeWithTxtFileButton_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string[] tomerge = File.ReadAllLines(openFileDialog.FileName);
+                    merger.MergeText(ref Editor, tomerge);
+                }
+                catch
+                {
+                    MessageBox.Show("An error occured", "TextStudio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void RecieveMail_Click(object sender, EventArgs e)
+        {
+            RecieveEmail recieveEmail = new RecieveEmail(ref Editor);
+        }
+
+        private void MergeWithEmailButton_Click(object sender, EventArgs e)
+        {
+            string[] tomerge = null;
+            RecieveEmail recieveEmail = new RecieveEmail(ref tomerge);
+            if(tomerge!=null)
+            {
+                merger.MergeText(ref Editor, tomerge);
+            }
+        }
+
+        private void RephraseTextButton_Click(object sender, EventArgs e)
+        {
+            rephraser.Rephrase(ref Editor);
+        }
+
+        private void InsertTableNow_Click(object sender, EventArgs e)
+        {
+            InsertTable insertTable = new InsertTable();
+            insertTable.ShowDialog();
+            if(insertTable.bitmap!=null)
+            {
+                Clipboard.SetImage(insertTable.bitmap);
+                Editor.Paste();
+            }
+        }
+
+        private void InsertCopyrightNoticeButton_Click(object sender, EventArgs e)
+        {
+            Editor.Text = Editor.Text + "\r\nCopyright © " +CopyrightYearInput.Text + " " + CopyrightNoticeNameInput.Text;
+        }
+
+        private void SetYourAdressButton_Click(object sender, EventArgs e)
+        {
+            InsertAdress insertAdress = new InsertAdress();
+            if(insertAdress.returnstring != null)
+            {
+                youraddress = insertAdress.returnstring;
+            }
+        }
+
+        private void SetRecieverAdressButton_Click(object sender, EventArgs e)
+        {
+            InsertAdress insertAdress = new InsertAdress();
+            if (insertAdress.returnstring != null)
+            {
+                recieveraddress = insertAdress.returnstring;
+            }
+        }
+
+        private void FormatAsLetterButton_Click(object sender, EventArgs e)
+        {
+            if(recieveraddress == null || youraddress == null)
+            {
+                MessageBox.Show("Please set an adress for reciever adress and/or your adress", "TextStudio Letter Formater", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            Editor.Text = MailFormatFromInput.Text + "\r\n" + youraddress + "\r\n\r\n" + DateTime.Now.Date.ToLongDateString() + "\r\n\r\n" + MailFormatToInput.Text + "\r\n" + recieveraddress + "\r\n\r\nDear " + MailFormatToInput.Text + ":\r\n\r\n" + Editor.Text + "\r\n\r\nFrom,\r\n" + MailFormatFromInput.Text;
         }
     }
 }

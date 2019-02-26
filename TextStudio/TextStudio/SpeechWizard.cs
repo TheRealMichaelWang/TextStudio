@@ -23,6 +23,7 @@ namespace TextStudio
             SpeechRecognizer.LoadGrammar(dictationgrammar);
             SpeechRecognizer.SetInputToDefaultAudioDevice();
         }
+
         public void ReadOutLoud(RichTextBox Editor)
         {
             string toread = Editor.SelectedText;

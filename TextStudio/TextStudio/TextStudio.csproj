@@ -31,10 +31,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenPop, Version=2.0.6.1120, Culture=neutral, PublicKeyToken=6bdb97f144b7efc8, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenPop.NET.2.0.6.1120\lib\net40\OpenPop.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EssayWriter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EssayWriter.Designer.cs">
+      <DependentUpon>EssayWriter.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindText.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +73,44 @@
     </Compile>
     <Compile Include="HeaderWizard.cs" />
     <Compile Include="HTMLConverter.cs" />
+    <Compile Include="InsertAdress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertAdress.Designer.cs">
+      <DependentUpon>InsertAdress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertTable.Designer.cs">
+      <DependentUpon>InsertTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailToWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailToWizard.Designer.cs">
+      <DependentUpon>MailToWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MergeLinePrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MergeLinePrompt.Designer.cs">
+      <DependentUpon>MergeLinePrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Merger.cs" />
+    <Compile Include="RecieveEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecieveEmail.Designer.cs">
+      <DependentUpon>RecieveEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rephraser.cs" />
+    <Compile Include="ResearchHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResearchHelper.Designer.cs">
+      <DependentUpon>ResearchHelper.cs</DependentUpon>
+    </Compile>
     <Compile Include="SpeechWizard.cs" />
     <Compile Include="SourceDesigner.cs">
       <SubType>Form</SubType>
@@ -79,11 +131,32 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SpellChecker.cs" />
+    <EmbeddedResource Include="EssayWriter.resx">
+      <DependentUpon>EssayWriter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FindText.resx">
       <DependentUpon>FindText.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FromUrl.resx">
       <DependentUpon>FromUrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertAdress.resx">
+      <DependentUpon>InsertAdress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertTable.resx">
+      <DependentUpon>InsertTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailToWizard.resx">
+      <DependentUpon>MailToWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MergeLinePrompt.resx">
+      <DependentUpon>MergeLinePrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecieveEmail.resx">
+      <DependentUpon>RecieveEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResearchHelper.resx">
+      <DependentUpon>ResearchHelper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SourceDesigner.resx">
       <DependentUpon>SourceDesigner.cs</DependentUpon>
@@ -100,6 +173,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,5 +184,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
 </Project>
